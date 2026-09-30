@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alex Sivera · Diseño y desarrollo web para negocios en Dénia</title>
+  <meta name="description" content="Diseño y programo webs para negocios: restaurantes, clínicas, talleres y comercios. Primero estudio cómo funciona tu negocio y después construyo una web pensada para que tus clientes llamen, reserven o te pidan presupuesto.">
+  <link rel="canonical" href="https://alexsivera.github.io/">
+  <meta name="theme-color" content="#f5f5f1">
+  <meta name="author" content="Alex Sivera">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Alex Sivera">
+  <meta property="og:title" content="Alex Sivera · Webs que se parecen a tu negocio, no a una plantilla">
+  <meta property="og:description" content="Diseño y desarrollo web para negocios. Primero entiendo tu negocio; después hago la web.">
+  <meta property="og:url" content="https://alexsivera.github.io/">
+  <meta property="og:image" content="https://alexsivera.github.io/assets/img/og-alex-sivera.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://alexsivera.github.io/#alex",
+        "name": "Alex Sivera",
+        "jobTitle": "Diseñador y desarrollador web",
+        "url": "https://alexsivera.github.io/",
+        "image": "https://alexsivera.github.io/assets/img/alex-sivera-900.jpg",
+        "email": "mailto:alexsivera.1999@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dénia",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://alexsivera.github.io/#servicio",
+        "name": "Alex Sivera · Diseño y desarrollo web",
+        "description": "Diseño y desarrollo de webs para negocios y empresas: investigación, estrategia, dirección creativa, diseño, desarrollo, revisión y lanzamiento.",
+        "url": "https://alexsivera.github.io/",
+        "image": "https://alexsivera.github.io/assets/img/og-alex-sivera.jpg",
+        "email": "alexsivera.1999@gmail.com",
+        "founder": {
+          "@id": "https://alexsivera.github.io/#alex"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Dénia"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Marina Alta"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dénia",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cab">
+    <div class="envoltura cab-in">
+      <a class="firma" href="./" aria-label="Alex Sivera, inicio">
+        <span class="firma-nombre">Alex Sivera</span>
+        <span class="firma-que">webs para negocios</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="proyectos/">Proyectos</a></li>
+          <li><a href="como-trabajo/">Cómo trabajo</a></li>
+          <li><a href="sobre-mi/">Sobre mí</a></li>
+          <li><a class="nav-contacto" href="contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-boton" type="button" data-menu-abrir aria-haspopup="dialog" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menú
+      </button>
+    </div>
+  </header>
+
+  <dialog class="menu" id="menu" aria-label="Menú">
+    <div class="envoltura menu-in">
+      <div class="menu-cab">
+        <span class="firma"><span class="firma-nombre">Alex Sivera</span></span>
+        <button class="menu-boton" type="button" data-menu-cerrar>
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Cerrar
+        </button>
+      </div>
+      <nav aria-label="Menú móvil">
+        <ol>
+          <li><a href="./" aria-current="page">Inicio</a></li>
+          <li><a href="proyectos/">Proyectos</a></li>
+          <li><a href="como-trabajo/">Cómo trabajo</a></li>
+          <li><a href="sobre-mi/">Sobre mí</a></li>
+          <li><a href="contacto/">Contacto</a></li>
+        </ol>
+      </nav>
+      <p class="menu-pie">¿Prefieres escribir directamente?<br><a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a></p>
+    </div>
+  </dialog>
+
+  <main id="contenido">
+
+    <section class="portada" id="inicio" aria-labelledby="titulo-portada">
+      <div class="envoltura">
+        <p class="rotulo">Diseño y desarrollo web · Dénia, Marina Alta</p>
+        <h1 class="portada-titulo" id="titulo-portada">
+          Webs que se parecen a
+          <span class="junto"><span class="trazo trazo-circulo">tu negocio<svg viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M152 7C104-1 30 3 10 22-6 38 38 57 104 57c58 0 94-10 92-30C194 9 150 2 104 4"/></svg></span>,</span>
+          no a una
+          <span class="junto"><span class="trazo trazo-tachado">plantilla<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12C40 7 84 14 122 9s58-3 76 1"/></svg></span>.</span>
+        </h1>
+
+        <div class="par" data-inicio>
+          <div>
+            <p class="portada-sub">Diseño y programo webs para negocios: restaurantes, clínicas, talleres, comercios. Antes de dibujar nada estudio cómo funciona el tuyo, qué te preguntan tus clientes y qué te hace distinto. Después construyo la web para que hagan lo que te importa: <strong>llamarte, reservar, pedirte presupuesto o venir</strong>.</p>
+            <div class="portada-acciones">
+              <a class="boton" href="contacto/">Cuéntame tu negocio <span class="flecha" aria-hidden="true">→</span></a>
+              <a class="enlace" href="#trabajo">Ver proyectos <span class="flecha" aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <aside class="nota" aria-label="Nota">
+            <p><span class="nota-num">1</span>Esta web tiene un solo objetivo: que me cuentes tu negocio. Por eso solo hay un botón negro en la portada.</p>
+            <p>Las notas en azul, como esta, explican por qué está hecha así. También las verás en cada proyecto.</p>
+          </aside>
+        </div>
+
+        <div class="tira" aria-labelledby="titulo-tira">
+          <h2 class="sr" id="titulo-tira">Webs recientes, vistas en el móvil</h2>
+          <ul class="tira-lista">
+            <li>
+              <a href="proyectos/el-pegoli/">
+                <div class="pantalla">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/pegoli-mobile-360.avif 360w, assets/img/pegoli-mobile-720.avif 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <source type="image/webp" srcset="assets/img/pegoli-mobile-360.webp 360w, assets/img/pegoli-mobile-720.webp 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <img src="assets/img/pegoli-mobile-360.jpg" srcset="assets/img/pegoli-mobile-360.jpg 360w, assets/img/pegoli-mobile-720.jpg 720w" sizes="(min-width: 56em) 22vw, 68vw" width="360" height="779" alt="Portada móvil de la propuesta para El Pegolí: rótulo rojo en cursiva y un aviso con el horario de hoy y el teléfono para reservar.">
+                  </picture>
+                </div>
+                <span class="tira-pie"><b>El Pegolí</b><span>Restaurante · Les Rotes</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos/seriart/">
+                <div class="pantalla">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/seriart-mobile-360.avif 360w, assets/img/seriart-mobile-720.avif 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <source type="image/webp" srcset="assets/img/seriart-mobile-360.webp 360w, assets/img/seriart-mobile-720.webp 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <img src="assets/img/seriart-mobile-360.jpg" srcset="assets/img/seriart-mobile-360.jpg 360w, assets/img/seriart-mobile-720.jpg 720w" sizes="(min-width: 56em) 22vw, 68vw" width="360" height="779" alt="Portada móvil de Seriart: vídeo del taller rotulando una furgoneta y el botón para pedir presupuesto.">
+                  </picture>
+                </div>
+                <span class="tira-pie"><b>Seriart</b><span>Taller de rotulación · Dénia</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos/fisioterapia-denia/">
+                <div class="pantalla">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/fisio-mobile-360.avif 360w, assets/img/fisio-mobile-720.avif 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <source type="image/webp" srcset="assets/img/fisio-mobile-360.webp 360w, assets/img/fisio-mobile-720.webp 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <img src="assets/img/fisio-mobile-360.jpg" srcset="assets/img/fisio-mobile-360.jpg 360w, assets/img/fisio-mobile-720.jpg 720w" sizes="(min-width: 56em) 22vw, 68vw" width="360" height="779" alt="Portada móvil de la propuesta para Fisioterapia Dénia: titular en serif azul y botón grande para reservar cita por teléfono.">
+                  </picture>
+                </div>
+                <span class="tira-pie"><b>Fisioterapia Dénia</b><span>Consulta de fisioterapia</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos/beekery/">
+                <div class="pantalla">
+                  <picture>
+                    <source type="image/avif" srcset="assets/img/beekery-mobile-360.avif 360w, assets/img/beekery-mobile-720.avif 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <source type="image/webp" srcset="assets/img/beekery-mobile-360.webp 360w, assets/img/beekery-mobile-720.webp 720w" sizes="(min-width: 56em) 22vw, 68vw">
+                    <img src="assets/img/beekery-mobile-360.jpg" srcset="assets/img/beekery-mobile-360.jpg 360w, assets/img/beekery-mobile-720.jpg 720w" sizes="(min-width: 56em) 22vw, 68vw" width="360" height="779" alt="Portada móvil de la propuesta para Beekery: indicador de «Abierto ahora», titular «Pan que no entiende de prisas» y barra inferior con llamar, WhatsApp y cómo llegar.">
+                  </picture>
+                </div>
+                <span class="tira-pie"><b>Beekery</b><span>Obrador de pan · Dénia</span></span>
+              </a>
+            </li>
+          </ul>
+          <div class="par tira-nota">
+            <aside class="nota" aria-label="Nota">
+              <p><span class="nota-num">2</span>Algunas webs recientes, en el móvil, que es donde las ven sus clientes. No comparten colores, tipografías ni estructura: cada una sale de su negocio.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRABAJO SELECCIONADO ============ -->
+    <section class="seccion" id="trabajo" aria-labelledby="titulo-trabajo">
+      <div class="envoltura">
+        <header class="seccion-cab">
+          <p class="rotulo"><b>01</b> Trabajo seleccionado</p>
+          <div class="par">
+            <h2 class="h2" id="titulo-trabajo">Webs para negocios que no se parecen entre sí</h2>
+            <aside class="nota" aria-label="Nota">
+              <p><span class="nota-num">3</span>Cada proyecto dice si es un encargo real o una propuesta hecha por mi cuenta. Si una web no dice la verdad sobre sí misma, no debería hacer la tuya.</p>
+            </aside>
+          </div>
+        </header>
+        <ul class="seleccion">
+          <li class="seleccion-item" data-aparece>
+            <a class="seleccion-img" href="proyectos/el-pegoli/" tabindex="-1" aria-hidden="true">
+              <picture>
+                  <source type="image/avif" srcset="assets/img/pegoli-hero-720.avif 720w, assets/img/pegoli-hero-1200.avif 1200w, assets/img/pegoli-hero-1800.avif 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <source type="image/webp" srcset="assets/img/pegoli-hero-720.webp 720w, assets/img/pegoli-hero-1200.webp 1200w, assets/img/pegoli-hero-1800.webp 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <img src="assets/img/pegoli-hero-1200.jpg" srcset="assets/img/pegoli-hero-720.jpg 720w, assets/img/pegoli-hero-1200.jpg 1200w, assets/img/pegoli-hero-1800.jpg 1800w" sizes="(min-width: 56em) 44vw, 94vw" width="1200" height="758" loading="lazy" decoding="async" alt="Portada de la propuesta para El Pegolí: rótulo rojo sobre fondo de cal, placa con el horario de hoy y la costa de Les Rotes.">
+                </picture>
+            </a>
+            <span class="estado estado-propuesta">Propuesta de rediseño</span>
+            <h3 class="seleccion-titulo"><a href="proyectos/el-pegoli/">El Pegolí</a></h3>
+            <p>Restaurante marinero en Les Rotes. La portada dice si hoy abren.</p>
+          </li>
+          <li class="seleccion-item" data-aparece>
+            <a class="seleccion-img" href="proyectos/seriart/" tabindex="-1" aria-hidden="true">
+              <picture>
+                  <source type="image/avif" srcset="assets/img/seriart-hero-720.avif 720w, assets/img/seriart-hero-1200.avif 1200w, assets/img/seriart-hero-1800.avif 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <source type="image/webp" srcset="assets/img/seriart-hero-720.webp 720w, assets/img/seriart-hero-1200.webp 1200w, assets/img/seriart-hero-1800.webp 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <img src="assets/img/seriart-hero-1200.jpg" srcset="assets/img/seriart-hero-720.jpg 720w, assets/img/seriart-hero-1200.jpg 1200w, assets/img/seriart-hero-1800.jpg 1800w" sizes="(min-width: 56em) 44vw, 94vw" width="1200" height="758" loading="lazy" decoding="async" alt="Portada de Seriart: titular sobre el vídeo del taller rotulando una furgoneta.">
+                </picture>
+            </a>
+            <span class="estado estado-real">Encargo real</span>
+            <h3 class="seleccion-titulo"><a href="proyectos/seriart/">Seriart</a></h3>
+            <p>Taller de rotulación en Dénia. Su dueño la actualiza desde un panel.</p>
+          </li>
+          <li class="seleccion-item" data-aparece>
+            <a class="seleccion-img" href="proyectos/fisioterapia-denia/" tabindex="-1" aria-hidden="true">
+              <picture>
+                  <source type="image/avif" srcset="assets/img/fisio-hero-720.avif 720w, assets/img/fisio-hero-1200.avif 1200w, assets/img/fisio-hero-1800.avif 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <source type="image/webp" srcset="assets/img/fisio-hero-720.webp 720w, assets/img/fisio-hero-1200.webp 1200w, assets/img/fisio-hero-1800.webp 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <img src="assets/img/fisio-hero-1200.jpg" srcset="assets/img/fisio-hero-720.jpg 720w, assets/img/fisio-hero-1200.jpg 1200w, assets/img/fisio-hero-1800.jpg 1800w" sizes="(min-width: 56em) 44vw, 94vw" width="1200" height="825" loading="lazy" decoding="async" alt="Portada de la propuesta para Fisioterapia Dénia: titular en serif azul y botón para reservar cita.">
+                </picture>
+            </a>
+            <span class="estado estado-propuesta">Propuesta de rediseño</span>
+            <h3 class="seleccion-titulo"><a href="proyectos/fisioterapia-denia/">Fisioterapia Dénia</a></h3>
+            <p>Consulta de fisioterapia. Ordenada por lo que le duele al paciente.</p>
+          </li>
+          <li class="seleccion-item" data-aparece>
+            <a class="seleccion-img" href="proyectos/beekery/" tabindex="-1" aria-hidden="true">
+              <picture>
+                  <source type="image/avif" srcset="assets/img/beekery-agenda-720.avif 720w, assets/img/beekery-agenda-1200.avif 1200w, assets/img/beekery-agenda-1800.avif 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <source type="image/webp" srcset="assets/img/beekery-agenda-720.webp 720w, assets/img/beekery-agenda-1200.webp 1200w, assets/img/beekery-agenda-1800.webp 1800w" sizes="(min-width: 56em) 44vw, 94vw">
+                  <img src="assets/img/beekery-agenda-1200.jpg" srcset="assets/img/beekery-agenda-720.jpg 720w, assets/img/beekery-agenda-1200.jpg 1200w, assets/img/beekery-agenda-1800.jpg 1800w" sizes="(min-width: 56em) 44vw, 94vw" width="1200" height="880" loading="lazy" decoding="async" alt="Agenda semanal de panes de la propuesta para Beekery, con el día de hoy destacado.">
+                </picture>
+            </a>
+            <span class="estado estado-propuesta">Propuesta conceptual</span>
+            <h3 class="seleccion-titulo"><a href="proyectos/beekery/">Beekery</a></h3>
+            <p>Obrador de pan. Una agenda que dice qué pan sale hoy.</p>
+          </li>
+        </ul>
+        <p class="seccion-mas"><a class="enlace" href="proyectos/">Ver todos los proyectos y cómo los pensé <span class="flecha" aria-hidden="true">→</span></a></p>
+
+        <div class="propio" data-aparece>
+          <div class="propio-texto">
+            <p class="rotulo"><b>+</b> Producto propio</p>
+            <h3 class="h3">También diseño y programo aplicaciones completas</h3>
+            <p>Entrenamiento, nutrición, finanzas y viajes: cuatro apps que uso cada día, con cuentas, datos y funcionamiento sin conexión. Cuando un negocio necesita algo más que una web, esto es lo que hay detrás.</p>
+            <a class="enlace" href="proyectos/#producto-propio">Ver las apps <span class="flecha" aria-hidden="true">→</span></a>
+          </div>
+          <ul class="tira-lista propio-lista">
+            <li>
+              <a href="proyectos/#producto-propio">
+                <div class="pantalla pantalla-mini">
+                  <picture>
+                  <source type="image/avif" srcset="assets/img/app-entreno-inicio-360.avif 360w, assets/img/app-entreno-inicio-720.avif 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <source type="image/webp" srcset="assets/img/app-entreno-inicio-360.webp 360w, assets/img/app-entreno-inicio-720.webp 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <img src="assets/img/app-entreno-inicio-720.jpg" srcset="assets/img/app-entreno-inicio-360.jpg 360w, assets/img/app-entreno-inicio-720.jpg 720w" sizes="(min-width: 56em) 12rem, 40vw" width="360" height="779" loading="lazy" decoding="async" alt="Pantalla de inicio de la app de entrenamiento: racha, calorías del día y objetivo semanal.">
+                </picture>
+                </div>
+                <span class="tira-pie"><b>App de entrenamiento</b></span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos/#producto-propio">
+                <div class="pantalla pantalla-mini">
+                  <picture>
+                  <source type="image/avif" srcset="assets/img/app-kalibra-diario-360.avif 360w, assets/img/app-kalibra-diario-720.avif 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <source type="image/webp" srcset="assets/img/app-kalibra-diario-360.webp 360w, assets/img/app-kalibra-diario-720.webp 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <img src="assets/img/app-kalibra-diario-720.jpg" srcset="assets/img/app-kalibra-diario-360.jpg 360w, assets/img/app-kalibra-diario-720.jpg 720w" sizes="(min-width: 56em) 12rem, 40vw" width="360" height="779" loading="lazy" decoding="async" alt="Diario de Kalibra: calorías restantes y macros del día, y las comidas para añadir alimentos.">
+                </picture>
+                </div>
+                <span class="tira-pie"><b>Kalibra · nutrición</b></span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos/#producto-propio">
+                <div class="pantalla pantalla-mini">
+                  <picture>
+                  <source type="image/avif" srcset="assets/img/app-pituviajes-mapa-360.avif 360w, assets/img/app-pituviajes-mapa-720.avif 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <source type="image/webp" srcset="assets/img/app-pituviajes-mapa-360.webp 360w, assets/img/app-pituviajes-mapa-720.webp 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <img src="assets/img/app-pituviajes-mapa-720.jpg" srcset="assets/img/app-pituviajes-mapa-360.jpg 360w, assets/img/app-pituviajes-mapa-720.jpg 720w" sizes="(min-width: 56em) 12rem, 40vw" width="360" height="779" loading="lazy" decoding="async" alt="Mapa de España de PituViajes con Aragón coloreado y el último viaje debajo.">
+                </picture>
+                </div>
+                <span class="tira-pie"><b>PituViajes · viajes</b></span>
+              </a>
+            </li>
+            <li>
+              <a href="proyectos/#producto-propio">
+                <div class="pantalla pantalla-mini">
+                  <picture>
+                  <source type="image/avif" srcset="assets/img/app-lacuenta-acceso-360.avif 360w, assets/img/app-lacuenta-acceso-720.avif 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <source type="image/webp" srcset="assets/img/app-lacuenta-acceso-360.webp 360w, assets/img/app-lacuenta-acceso-720.webp 720w" sizes="(min-width: 56em) 12rem, 40vw">
+                  <img src="assets/img/app-lacuenta-acceso-720.jpg" srcset="assets/img/app-lacuenta-acceso-360.jpg 360w, assets/img/app-lacuenta-acceso-720.jpg 720w" sizes="(min-width: 56em) 12rem, 40vw" width="360" height="779" loading="lazy" decoding="async" alt="Pantalla de acceso de LaCuenta, app de finanzas personales.">
+                </picture>
+                </div>
+                <span class="tira-pie"><b>LaCuenta · finanzas</b></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO TRABAJO (RESUMEN) ============ -->
+    <section class="seccion" id="proceso" aria-labelledby="titulo-proceso">
+      <div class="envoltura">
+        <header class="seccion-cab">
+          <p class="rotulo"><b>02</b> Cómo trabajo</p>
+          <div class="par">
+            <h2 class="h2" id="titulo-proceso">Primero entiendo tu negocio. Después hago la web.</h2>
+            <aside class="nota" aria-label="Ejemplo real">
+              <p>En El Pegolí, algunos buscadores decían que el restaurante había cerrado. Era falso, y la propuesta lo desmiente desde la portada. Eso sale de investigar, no de diseñar.</p>
+            </aside>
+          </div>
+        </header>
+        <ol class="pasos-mini">
+          <li><h3>Investigación</h3><p>Tu web, tu ficha de Google, tus reseñas y tu competencia.</p></li>
+          <li><h3>Estrategia</h3><p>Qué tiene que conseguir la web y para quién.</p></li>
+          <li><h3>Dirección creativa</h3><p>Una identidad que sale de tu negocio.</p></li>
+          <li><h3>Diseño</h3><p>Primero el móvil. Textos escritos contigo.</p></li>
+          <li><h3>Desarrollo</h3><p>Programada a mano, ligera y rápida.</p></li>
+          <li><h3>Revisión</h3><p>Probada como la usaría un cliente tuyo.</p></li>
+          <li><h3>Lanzamiento</h3><p>Publicada a tu nombre, sin perder visitas.</p></li>
+        </ol>
+        <p class="seccion-mas"><a class="enlace" href="como-trabajo/">Qué pasa en cada paso y qué recibes <span class="flecha" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ (RESUMEN) ============ -->
+    <section class="seccion" id="sobre-mi" aria-labelledby="titulo-sobre">
+      <div class="envoltura sobre-mini">
+        <figure class="retrato">
+          <picture>
+                  <source type="image/avif" srcset="assets/img/alex-sivera-480.avif 480w, assets/img/alex-sivera-780.avif 780w" sizes="(min-width: 52em) 16rem, 60vw">
+                  <source type="image/webp" srcset="assets/img/alex-sivera-480.webp 480w, assets/img/alex-sivera-780.webp 780w" sizes="(min-width: 52em) 16rem, 60vw">
+                  <img src="assets/img/alex-sivera-780.jpg" srcset="assets/img/alex-sivera-480.jpg 480w, assets/img/alex-sivera-780.jpg 780w" sizes="(min-width: 52em) 16rem, 60vw" width="480" height="650" loading="lazy" decoding="async" alt="Retrato de Alex Sivera en blanco y negro.">
+                </picture>
+        </figure>
+        <div>
+          <p class="rotulo"><b>03</b> Sobre mí</p>
+          <h2 class="h2" id="titulo-sobre">Soy Alex Sivera. Hago yo cada web, de principio a fin.</h2>
+          <p class="entradilla">Investigo, diseño, escribo los textos contigo, programo y reviso, desde Dénia. Hablas siempre con la persona que hace tu web.</p>
+          <p><a class="enlace" href="sobre-mi/">Más sobre mí <span class="flecha" aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO (LLAMADA) ============ -->
+    <section class="hoja hoja-corta" id="contacto" aria-labelledby="titulo-contacto" data-destino>
+      <div class="envoltura">
+        <p class="rotulo"><b>04</b> Contacto</p>
+        <h2 class="hoja-titulo" id="titulo-contacto">Cuéntame tu negocio</h2>
+        <p class="hoja-intro">No hace falta que sepas qué web quieres: eso lo vemos juntos. Completa una frase y te respondo yo.</p>
+        <div class="hoja-acciones">
+          <a class="boton boton-inverso" href="contacto/">Empezar <span class="flecha" aria-hidden="true">→</span></a>
+          <a class="hoja-email" href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie" id="pie" data-destino>
+    <div class="envoltura">
+      <div class="pie-in">
+        <div>
+          <p class="pie-firma">Alex Sivera<span>Diseño y desarrollo web para negocios · Dénia</span></p>
+        </div>
+        <nav aria-label="Pie">
+          <h2>Web</h2>
+          <ul>
+            <li><a href="./">Inicio</a></li>
+            <li><a href="proyectos/">Proyectos</a></li>
+            <li><a href="como-trabajo/">Cómo trabajo</a></li>
+            <li><a href="sobre-mi/">Sobre mí</a></li>
+            <li><a href="contacto/">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Casos</h2>
+          <ul>
+            <li><a href="proyectos/el-pegoli/">El Pegolí</a></li>
+            <li><a href="proyectos/seriart/">Seriart</a></li>
+            <li><a href="proyectos/fisioterapia-denia/">Fisioterapia Dénia</a></li>
+            <li><a href="proyectos/beekery/">Beekery</a></li>
+            <li><a href="proyectos/#producto-propio">Apps propias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-legal">
+        <p>© <span data-anio>2026</span> Alex Sivera · <a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a> · <a href="privacidad/">Privacidad</a></p>
+        <p>Hecha a mano, sin plantilla y sin cookies de seguimiento.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="barra-movil">
+    <a class="boton" href="contacto/">Cuéntame tu negocio <span class="flecha" aria-hidden="true">→</span></a>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

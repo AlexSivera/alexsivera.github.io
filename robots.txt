@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_src/
+Disallow: /docs/
+Disallow: /scripts/
+
+Sitemap: https://alexsivera.github.io/sitemap.xml

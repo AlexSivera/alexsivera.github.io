@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>El Pegolí: propuesta de rediseño web · Alex Sivera</title>
+  <meta name="description" content="Caso: propuesta de rediseño de la web del Restaurante El Pegolí (Les Rotes, Dénia). Investigación, concepto «rotulado en el muro», horario en directo y decisiones de diseño explicadas.">
+  <link rel="canonical" href="https://alexsivera.github.io/proyectos/el-pegoli/">
+  <meta name="theme-color" content="#f5f5f1">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Alex Sivera">
+  <meta property="og:title" content="El Pegolí · propuesta de rediseño web">
+  <meta property="og:description" content="Una casa de comidas de 1943 cuya web decía cosas que ya no eran verdad. Cómo la rediseñaría, paso a paso.">
+  <meta property="og:url" content="https://alexsivera.github.io/proyectos/el-pegoli/">
+  <meta property="og:image" content="https://alexsivera.github.io/assets/img/pegoli-hero-1200.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../../assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "El Pegolí: propuesta de rediseño web",
+    "url": "https://alexsivera.github.io/proyectos/el-pegoli/",
+    "image": "https://alexsivera.github.io/assets/img/pegoli-hero-1200.jpg",
+    "inLanguage": "es",
+    "dateCreated": "2026-09",
+    "creativeWorkStatus": "Propuesta sin encargo",
+    "author": { "@type": "Person", "name": "Alex Sivera", "url": "https://alexsivera.github.io/" },
+    "about": { "@type": "Restaurant", "name": "Restaurante El Pegolí", "address": { "@type": "PostalAddress", "addressLocality": "Dénia", "addressCountry": "ES" } }
+  }
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cab">
+    <div class="envoltura cab-in">
+      <a class="firma" href="../../" aria-label="Alex Sivera, inicio">
+        <span class="firma-nombre">Alex Sivera</span>
+        <span class="firma-que">webs para negocios</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
+          <li><a href="../../sobre-mi/">Sobre mí</a></li>
+          <li><a class="nav-contacto" href="../../contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-boton" type="button" data-menu-abrir aria-haspopup="dialog" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menú
+      </button>
+    </div>
+  </header>
+
+  <dialog class="menu" id="menu" aria-label="Menú">
+    <div class="envoltura menu-in">
+      <div class="menu-cab">
+        <span class="firma"><span class="firma-nombre">Alex Sivera</span></span>
+        <button class="menu-boton" type="button" data-menu-cerrar>
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Cerrar
+        </button>
+      </div>
+      <nav aria-label="Menú móvil">
+        <ol>
+          <li><a href="../../">Inicio</a></li>
+          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
+          <li><a href="../../sobre-mi/">Sobre mí</a></li>
+          <li><a href="../../contacto/">Contacto</a></li>
+        </ol>
+      </nav>
+      <p class="menu-pie">¿Prefieres escribir directamente?<br><a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a></p>
+    </div>
+  </dialog>
+
+  <main id="contenido">
+    <header class="envoltura caso-cab" data-inicio>
+      <p class="migas"><a href="../">← Todos los proyectos</a></p>
+      <span class="estado estado-propuesta">Propuesta de rediseño · sin encargo</span>
+      <h1 class="caso-titulo">El Pegolí</h1>
+      <p class="caso-frase">Una casa de comidas marinera de 1943 cuya web decía cosas que ya no eran verdad.</p>
+      <p class="aviso">Propuesta hecha por iniciativa propia, sin encargo ni relación comercial con el restaurante. Los datos proceden de fuentes públicas. La marca y sus contenidos pertenecen a sus propietarios.</p>
+      <dl class="ficha caso-ficha">
+        <div><dt>Negocio</dt><dd>Restaurante marinero en Les Rotes, Dénia</dd></div>
+        <div><dt>Acción principal</dt><dd>Llamar para reservar (no hay reserva online)</dd></div>
+        <div><dt>Qué incluye</dt><dd>Estudio del negocio, concepto, web en español e inglés</dd></div>
+        <div><dt>Año</dt><dd>2026</dd></div>
+      </dl>
+    </header>
+
+    <div class="envoltura caso-portada">
+      <figure class="figura">
+        <div class="figura-marco">
+          <picture>
+            <source type="image/avif" srcset="../../assets/img/pegoli-hero-720.avif 720w, ../../assets/img/pegoli-hero-1200.avif 1200w, ../../assets/img/pegoli-hero-1800.avif 1800w" sizes="(min-width: 88rem) 82rem, 94vw">
+            <source type="image/webp" srcset="../../assets/img/pegoli-hero-720.webp 720w, ../../assets/img/pegoli-hero-1200.webp 1200w, ../../assets/img/pegoli-hero-1800.webp 1800w" sizes="(min-width: 88rem) 82rem, 94vw">
+            <img src="../../assets/img/pegoli-hero-1200.jpg" srcset="../../assets/img/pegoli-hero-720.jpg 720w, ../../assets/img/pegoli-hero-1200.jpg 1200w, ../../assets/img/pegoli-hero-1800.jpg 1800w" sizes="(min-width: 88rem) 82rem, 94vw" width="1200" height="758" fetchpriority="high" alt="Portada de la propuesta para El Pegolí en escritorio: rótulo «Restaurante El Pegolí», placa «Parte del mediodía» con el horario y el teléfono, y la costa de roca de Les Rotes al pie.">
+          </picture>
+        </div>
+        <figcaption>Portada en escritorio. La placa de la derecha cambia sola según el día y la hora.</figcaption>
+      </figure>
+    </div>
+
+    <div class="envoltura">
+      <section class="bloque" aria-labelledby="t-partida">
+        <h2 class="bloque-titulo" id="t-partida">El punto de partida</h2>
+        <div class="par">
+          <div class="texto">
+            <p>El Pegolí abrió en 1943 como un <i>baret</i> en la costa de roca de Les Rotes. Hoy lo llevan la tercera y la cuarta generación de la familia y es restaurante recomendado de la Guía Repsol.</p>
+            <p>Su web, en cambio, era un blog gratuito que se había quedado atrás: anunciaba cenas de verano que ya no sirve, daba fechas de vacaciones distintas según la página y unas coordenadas que no caen en Dénia.</p>
+            <p>En un restaurante que solo abre a mediodía y solo reserva por teléfono, esos datos son justo los que deciden si alguien llama.</p>
+          </div>
+          <aside class="nota" aria-label="Nota">
+            <p>El cliente de un restaurante no lee la web: la escanea buscando tres cosas. ¿Abren hoy? ¿Cómo reservo? ¿Cuánto me va a costar?</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="bloque" aria-labelledby="t-hallazgos">
+        <h2 class="bloque-titulo" id="t-hallazgos">Lo que encontré investigando</h2>
+        <ol class="hallazgos">
+          <li><div><b>Un rumor de cierre.</b> Algunos resúmenes automáticos de buscadores afirmaban que había cerrado a finales de 2023. Era falso: su ficha de Google Maps seguía activa, con reseñas de hacía tres semanas respondidas por la casa.<span class="fuente">Google Maps, Tripadvisor e Instagram, septiembre de 2026.</span></div></li>
+          <li><div><b>Un horario que se contradecía.</b> Instagram dice «no abrimos por la noche»; la web antigua seguía anunciando cenas de jueves a sábado.<span class="fuente">Perfil de Instagram del restaurante y web anterior.</span></div></li>
+          <li><div><b>El precio, en boca de todos.</b> La gamba roja se vende al peso y su precio cambia con la lonja. Las reseñas hablan de ello a menudo: conviene explicarlo antes de que llegue la cuenta.<span class="fuente">Reseñas de Tripadvisor y Google.</span></div></li>
+          <li><div><b>Las mismas dudas, una y otra vez.</b> Aparcar en verano, si pueden ir niños o perros, si hay opciones sin gluten.<span class="fuente">Guía Repsol y datos de usuarios en Google Maps.</span></div></li>
+          <li><div><b>Una historia que nadie contaba.</b> Una caja de cerillas antigua con los nombres de los fundadores, un pionero de la gamba roja de Dénia y una colección de ánforas donada al Ayuntamiento.<span class="fuente">Prensa local (La Marina Plaza, Alicante Plaza) y archivo de coleccionismo.</span></div></li>
+        </ol>
+      </section>
+
+      <section class="bloque" aria-labelledby="t-idea">
+        <h2 class="bloque-titulo" id="t-idea">La idea: rotulado en el muro</h2>
+        <div class="par">
+          <div class="texto">
+            <p>La imagen más propia de El Pegolí no es un plato. Es el muro encalado de su terraza, sobre las rocas, con el nombre pintado a mano: «Restaurante» en negro y «El Pegolí» en cursiva roja.</p>
+            <p>La web se construye como ese muro. Y todos los recursos gráficos salen de objetos reales de la casa: la barra a listones del baret de los años cuarenta, su cartel pintado, la balaustrada de la terraza, los azulejos marineros del comedor.</p>
+          </div>
+          <aside class="nota" aria-label="Nota">
+            <p>La prueba: si le cambias el logotipo, esta web no le sirve a ningún otro restaurante de la costa. Ninguno tiene ese muro ni esa historia.</p>
+          </aside>
+        </div>
+        <div class="muestrario" style="margin-top: 2.5rem;">
+          <ul class="muestras" aria-label="Colores del proyecto">
+            <li><i style="--c:#F6F2EA"></i><code>cal</code></li>
+            <li><i style="--c:#AE2419"></i><code>rótulo</code></li>
+            <li><i style="--c:#1D1B19"></i><code>tinta</code></li>
+            <li><i style="--c:#123F4A"></i><code>mar</code></li>
+            <li><i style="--c:#B86F3C"></i><code>tosca</code></li>
+            <li><i style="--c:#4E9E9C"></i><code>azulejo</code></li>
+          </ul>
+          <p class="muestrario-texto"><b>Tipografías:</b> Yellowtail, cursiva de rotulista, solo para la marca; Young Serif, como letra pintada con plantilla, para titulares; Libre Franklin, de la cartelería de la época, para leer.</p>
+        </div>
+      </section>
+
+      <section class="bloque" aria-labelledby="t-decisiones">
+        <h2 class="bloque-titulo" id="t-decisiones">Decisiones, una a una</h2>
+
+        <div class="anotada" data-anotada>
+          <figure class="figura">
+            <div class="figura-marco anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/pegoli-hero-720.avif 720w, ../../assets/img/pegoli-hero-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/pegoli-hero-720.webp 720w, ../../assets/img/pegoli-hero-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <img src="../../assets/img/pegoli-hero-720.jpg" srcset="../../assets/img/pegoli-hero-720.jpg 720w, ../../assets/img/pegoli-hero-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="758" loading="lazy" decoding="async" alt="Portada de la propuesta con cuatro marcadores numerados: la placa del horario, el rótulo, el botón de llamada y el borde de roca.">
+              </picture>
+              <span class="marca" data-n="1" style="--x:60.5%; --y:21%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:10%; --y:34%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:60.5%; --y:50%" aria-hidden="true">3</span>
+              <span class="marca" data-n="4" style="--x:52%; --y:88%" aria-hidden="true">4</span>
+            </div>
+            <figcaption>La portada.</figcaption>
+          </figure>
+          <ol class="decisiones">
+            <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>El parte del mediodía</h3><p>Una placa calcula con la hora de Madrid si hoy abren, a qué hora y cuál es el teléfono. Responde la primera duda y desmiente el rumor de cierre sin tener que mencionarlo.</p></div></li>
+            <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>El rótulo del muro</h3><p>«Restaurante» en romana negra y «El Pegolí» en cursiva roja, igual que está pintado en la fachada de la terraza.</p></div></li>
+            <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Llamar, sin rodeos</h3><p>No hay reserva online y no se simula una. La acción es llamar, y el número se ve entero y grande.</p></div></li>
+            <li data-n="4" tabindex="0"><span aria-hidden="true">4</span><div><h3>El muro acaba en la roca</h3><p>Un borde irregular da paso a la costa de Les Rotes, como pasa de verdad bajo la terraza. Foto con licencia libre y crédito visible.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="anotada" data-anotada>
+          <figure class="figura">
+            <div class="figura-marco anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/pegoli-gamba-720.avif 720w, ../../assets/img/pegoli-gamba-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/pegoli-gamba-720.webp 720w, ../../assets/img/pegoli-gamba-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <img src="../../assets/img/pegoli-gamba-720.jpg" srcset="../../assets/img/pegoli-gamba-720.jpg 720w, ../../assets/img/pegoli-gamba-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="1091" loading="lazy" decoding="async" alt="Sección «Hay gamba roja»: pizarra oscura con marco de madera, grabado antiguo de una gamba, barra a listones debajo y tres notas sobre cómo va el precio.">
+              </picture>
+              <span class="marca" data-n="1" style="--x:11%; --y:17%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:88%; --y:40%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:50%; --y:67%" aria-hidden="true">3</span>
+              <span class="marca" data-n="4" style="--x:53%; --y:74%" aria-hidden="true">4</span>
+            </div>
+            <figcaption>La gamba roja, el plato de la casa.</figcaption>
+          </figure>
+          <ol class="decisiones">
+            <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>Una pizarra, no un banner</h3><p>Recrea el cartel pintado «Hay cerveza y aperitivos» que colgaba sobre la barra del baret en una foto de los años cuarenta.</p></div></li>
+            <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>Un grabado de 1902</h3><p>En lugar de la típica foto de gamba sobre hielo, un grabado científico de dominio público, entintado en tiza.</p></div></li>
+            <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>La barra a listones</h3><p>El frontal de madera del baret original, dibujado en SVG: pesa casi nada y se ve nítido en cualquier pantalla.</p></div></li>
+            <li data-n="4" tabindex="0"><span aria-hidden="true">4</span><div><h3>Cómo va el precio</h3><p>Al peso, según lonja, y el consejo de preguntar antes. Explica sin inventar cifras que cambian cada día.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="anotada" data-anotada>
+          <figure class="figura">
+            <div class="figura-marco anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/pegoli-carta-720.avif 720w, ../../assets/img/pegoli-carta-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/pegoli-carta-720.webp 720w, ../../assets/img/pegoli-carta-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <img src="../../assets/img/pegoli-carta-720.jpg" srcset="../../assets/img/pegoli-carta-720.jpg 720w, ../../assets/img/pegoli-carta-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="1043" loading="lazy" decoding="async" alt="Sección «En el orden de siempre»: una hoja de carta estrecha con los platos en cuatro tiempos, la gamba marcada «al peso» y el pescado «según lonja».">
+              </picture>
+              <span class="marca" data-n="1" style="--x:9%; --y:5%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:48%; --y:6%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:97.5%; --y:69%" aria-hidden="true">3</span>
+            </div>
+            <figcaption>La carta.</figcaption>
+          </figure>
+          <ol class="decisiones">
+            <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>En el orden de siempre</h3><p>Durante años allí se comía un solo menú: salazones, marisco y arroz. La carta se ordena igual y lo cuenta.</p></div></li>
+            <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>Una hoja de papel</h3><p>Estrecha y centrada, como la carta que te dan en la mesa. Sin cuadrícula de tarjetas con fotos de platos que no son suyos.</p></div></li>
+            <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Sin precios inventados</h3><p>La gamba va «al peso» y el pescado «según lonja». Lo que cambia cada día no se publica como fijo.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="anotada" data-anotada>
+          <figure class="figura">
+            <div class="figura-marco anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/pegoli-antes-720.avif 720w, ../../assets/img/pegoli-antes-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/pegoli-antes-720.webp 720w, ../../assets/img/pegoli-antes-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                <img src="../../assets/img/pegoli-antes-720.jpg" srcset="../../assets/img/pegoli-antes-720.jpg 720w, ../../assets/img/pegoli-antes-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="989" loading="lazy" decoding="async" alt="Sección «Lo que conviene saber»: panel de azulejos cuadrados con filete turquesa, cada uno con una respuesta práctica: horario, reserva, precio, aparcar, niños, perros.">
+              </picture>
+              <span class="marca" data-n="1" style="--x:14%; --y:23%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:14%; --y:46%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:84%; --y:78%" aria-hidden="true">3</span>
+            </div>
+            <figcaption>Antes de venir.</figcaption>
+          </figure>
+          <ol class="decisiones">
+            <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>Cada azulejo, una duda real</h3><p>Salen de las reseñas y de las fichas del restaurante, no de una lista genérica de preguntas frecuentes.</p></div></li>
+            <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>La verdad sobre aparcar</h3><p>En verano cuesta. La web lo dice y explica cómo hacerlo, en vez de esconderlo.</p></div></li>
+            <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Azulejo marinero</h3><p>El filete turquesa de su vajilla y los cuadros de azulejos del comedor, convertidos en sistema gráfico.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="bloque" aria-labelledby="t-movil">
+        <h2 class="bloque-titulo" id="t-movil">En el móvil</h2>
+        <div class="caso-movil">
+          <figure class="figura">
+            <div class="pantalla">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/pegoli-mobile-360.avif 360w, ../../assets/img/pegoli-mobile-720.avif 720w" sizes="20rem">
+                <source type="image/webp" srcset="../../assets/img/pegoli-mobile-360.webp 360w, ../../assets/img/pegoli-mobile-720.webp 720w" sizes="20rem">
+                <img src="../../assets/img/pegoli-mobile-360.jpg" srcset="../../assets/img/pegoli-mobile-360.jpg 360w, ../../assets/img/pegoli-mobile-720.jpg 720w" sizes="20rem" width="360" height="779" loading="lazy" decoding="async" alt="Portada móvil: rótulo, placa del horario y barra fija inferior con los botones Llamar, Cómo llegar e Índice.">
+              </picture>
+            </div>
+            <figcaption>390 px de ancho, el tamaño de un móvil corriente.</figcaption>
+          </figure>
+          <ol class="decisiones">
+            <li><span aria-hidden="true">1</span><div><h3>Una barra con lo esencial</h3><p>Llamar, Cómo llegar e Índice, fijos abajo, donde llega el pulgar. Es lo que se busca con el móvil en la mano camino de la playa.</p></div></li>
+            <li><span aria-hidden="true">2</span><div><h3>El horario, lo primero</h3><p>La placa del mediodía sube justo debajo del nombre. En escritorio está al lado; en el móvil manda.</p></div></li>
+            <li><span aria-hidden="true">3</span><div><h3>Un menú que se lee</h3><p>El índice se abre a pantalla completa, con letra grande y sin submenús.</p></div></li>
+            <li><span aria-hidden="true">4</span><div><h3>También en inglés</h3><p>Versión completa en inglés para el visitante extranjero, con la misma estructura.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="bloque" aria-labelledby="t-honesto">
+        <h2 class="bloque-titulo" id="t-honesto">Lo que no me he inventado</h2>
+        <ul class="pendientes">
+          <li>Ningún precio: lo que depende de la lonja se dice así.</li>
+          <li>Ninguna foto de platos. No hay fotografías del restaurante con permiso de uso; las del paisaje de Les Rotes tienen licencia libre y crédito visible.</li>
+          <li>La lista de platos sale de reseñas y prensa de 2013 a 2026 y queda marcada para que la casa la valide.</li>
+          <li>Las fechas de vacaciones y el horario de invierno quedan pendientes de confirmar con el restaurante.</li>
+        </ul>
+        <p class="creditos">Las capturas incluyen la foto «Les Rotes, Dénia, roques» de Joanbanjo (<a href="https://commons.wikimedia.org/wiki/File:Les_Rotes,_D%C3%A9nia,_roques.JPG">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>) y el grabado de <i lang="la">Aristeus antennatus</i> de 1902 (<a href="https://commons.wikimedia.org/wiki/File:Aristeus_antennatus.jpg">dominio público</a>).</p>
+      </section>
+
+      <nav class="siguiente" aria-label="Siguiente proyecto">
+        <a href="../seriart/">
+          <span class="rotulo">Siguiente proyecto</span>
+          <strong>Seriart →</strong>
+          <span class="que">Encargo real: la web de un taller de rotulación que su dueño actualiza solo.</span>
+        </a>
+      </nav>
+    </div>
+
+    <section class="cierre" aria-labelledby="t-cierre" data-destino>
+      <div class="envoltura">
+        <h2 id="t-cierre">¿Tu web también dice cosas que ya no son verdad?</h2>
+        <p>Cuéntame tu negocio. Empiezo por lo mismo que aquí: entender cómo funciona y qué necesitan saber tus clientes.</p>
+        <a class="boton boton-inverso" href="../../contacto/">Cuéntame tu negocio <span class="flecha" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie" id="pie" data-destino>
+    <div class="envoltura">
+      <div class="pie-in">
+        <div>
+          <p class="pie-firma">Alex Sivera<span>Diseño y desarrollo web para negocios · Dénia</span></p>
+        </div>
+        <nav aria-label="Pie">
+          <h2>Web</h2>
+          <ul>
+            <li><a href="../../">Inicio</a></li>
+            <li><a href="../../proyectos/">Proyectos</a></li>
+            <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
+            <li><a href="../../sobre-mi/">Sobre mí</a></li>
+            <li><a href="../../contacto/">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Casos</h2>
+          <ul>
+            <li><a href="../../proyectos/el-pegoli/" aria-current="page">El Pegolí</a></li>
+            <li><a href="../../proyectos/seriart/">Seriart</a></li>
+            <li><a href="../../proyectos/fisioterapia-denia/">Fisioterapia Dénia</a></li>
+            <li><a href="../../proyectos/beekery/">Beekery</a></li>
+            <li><a href="../../proyectos/#producto-propio">Apps propias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-legal">
+        <p>© <span data-anio>2026</span> Alex Sivera · <a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a> · <a href="../../privacidad/">Privacidad</a></p>
+        <p>Hecha a mano, sin plantilla y sin cookies de seguimiento.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="barra-movil">
+    <a class="boton" href="../../contacto/">Cuéntame tu negocio <span class="flecha" aria-hidden="true">→</span></a>
+  </div>
+
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

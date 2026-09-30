@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contacto · Alex Sivera</title>
+  <meta name="description" content="Cuéntame tu negocio y qué te gustaría que hiciera tu web. Te respondo yo, personalmente, desde Dénia.">
+  <link rel="canonical" href="https://alexsivera.github.io/contacto/">
+  <meta name="theme-color" content="#f5f5f1">
+  <meta name="author" content="Alex Sivera">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Alex Sivera">
+  <meta property="og:title" content="Contacto · Alex Sivera">
+  <meta property="og:description" content="Cuéntame tu negocio y qué te gustaría que hiciera tu web. Te respondo yo, personalmente, desde Dénia.">
+  <meta property="og:url" content="https://alexsivera.github.io/contacto/">
+  <meta property="og:image" content="https://alexsivera.github.io/assets/img/og-alex-sivera.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cab">
+    <div class="envoltura cab-in">
+      <a class="firma" href="../" aria-label="Alex Sivera, inicio">
+        <span class="firma-nombre">Alex Sivera</span>
+        <span class="firma-que">webs para negocios</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="../proyectos/">Proyectos</a></li>
+          <li><a href="../como-trabajo/">Cómo trabajo</a></li>
+          <li><a href="../sobre-mi/">Sobre mí</a></li>
+          <li><a class="nav-contacto" href="../contacto/" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-boton" type="button" data-menu-abrir aria-haspopup="dialog" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Menú
+      </button>
+    </div>
+  </header>
+
+  <dialog class="menu" id="menu" aria-label="Menú">
+    <div class="envoltura menu-in">
+      <div class="menu-cab">
+        <span class="firma"><span class="firma-nombre">Alex Sivera</span></span>
+        <button class="menu-boton" type="button" data-menu-cerrar>
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Cerrar
+        </button>
+      </div>
+      <nav aria-label="Menú móvil">
+        <ol>
+          <li><a href="../">Inicio</a></li>
+          <li><a href="../proyectos/">Proyectos</a></li>
+          <li><a href="../como-trabajo/">Cómo trabajo</a></li>
+          <li><a href="../sobre-mi/">Sobre mí</a></li>
+          <li><a href="../contacto/" aria-current="page">Contacto</a></li>
+        </ol>
+      </nav>
+      <p class="menu-pie">¿Prefieres escribir directamente?<br><a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a></p>
+    </div>
+  </dialog>
+
+  <main id="contenido">
+
+    <section class="hoja hoja-pagina" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="envoltura">
+        <p class="rotulo">Contacto</p>
+        <h1 class="hoja-titulo" id="titulo-contacto">Cuéntame tu negocio</h1>
+        <p class="hoja-intro">Completa la frase o escríbeme a <a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a>. No hace falta que sepas qué web quieres: eso lo vemos juntos.</p>
+
+        <div class="hoja-cuerpo">
+          <!-- Clave pública de Web3Forms (envía los mensajes a alexsivera.1999@gmail.com). Si se borra, el formulario abre el correo del visitante. -->
+          <form class="carta" data-carta data-email="alexsivera.1999@gmail.com" data-web3forms="872a7946-a7f2-4b5a-acd1-11ebe669e03b" action="mailto:alexsivera.1999@gmail.com" method="post" enctype="text/plain" novalidate>
+            <p class="carta-frase">
+              Hola, Alex. Me llamo
+              <label class="hueco"><span class="sr">Tu nombre</span><input name="nombre" data-nombre="tu nombre" required autocomplete="name" placeholder="tu nombre"></label>
+              y tengo
+              <label class="hueco"><span class="sr">Tu negocio</span><input class="ancho" name="negocio" data-nombre="tu negocio" required list="tipos-negocio" placeholder="un restaurante"></label>
+              en
+              <label class="hueco"><span class="sr">Localidad</span><input name="localidad" data-nombre="la localidad" autocomplete="address-level2" placeholder="Dénia"></label>.
+              Me gustaría que quien visite mi web
+              <label class="hueco"><span class="sr">Qué quieres que haga quien visite tu web</span>
+                <select name="objetivo">
+                  <option>me llame</option>
+                  <option>reserve</option>
+                  <option>me pida presupuesto</option>
+                  <option>venga al local</option>
+                  <option>compre online</option>
+                  <option>me escriba por WhatsApp</option>
+                  <option>aún no lo tengo claro</option>
+                </select>
+              </label>.
+            </p>
+            <p class="carta-frase">
+              Mi web actual es
+              <label class="hueco"><span class="sr">Tu web actual (opcional)</span><input class="ancho" name="web" inputmode="url" autocomplete="url" placeholder="todavía no tengo"></label>.
+              Puedes escribirme a
+              <label class="hueco"><span class="sr">Tu email</span><input class="ancho" type="email" name="email" data-nombre="tu email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}" autocomplete="email" placeholder="tu@email.com"></label>.
+            </p>
+            <!-- Campo trampa contra spam: las personas no lo ven; si llega marcado, no se envía. -->
+            <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <datalist id="tipos-negocio">
+              <option value="un restaurante"></option>
+              <option value="un bar"></option>
+              <option value="una clínica"></option>
+              <option value="un taller"></option>
+              <option value="una tienda"></option>
+              <option value="un obrador"></option>
+              <option value="un centro de estética"></option>
+              <option value="una empresa de servicios"></option>
+            </datalist>
+
+            <label class="carta-extra">
+              <span>Si quieres, cuéntame algo más (opcional)</span>
+              <textarea name="mensaje" rows="3" placeholder="Qué te gusta o no de tu web actual, para cuándo la necesitas…"></textarea>
+            </label>
+            <label class="acepto">
+              <input type="checkbox" name="privacidad" data-nombre="aceptar la privacidad" required>
+              <span>He leído la <a href="../privacidad/">política de privacidad</a>. Solo usaré tus datos para responderte.</span>
+            </label>
+            <div class="carta-enviar">
+              <button class="boton boton-inverso" type="submit">Enviar a Alex <span class="flecha" aria-hidden="true">→</span></button>
+            </div>
+            <p class="form-estado" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="despues" aria-labelledby="titulo-despues">
+            <h2 id="titulo-despues">Qué pasa después</h2>
+            <ol>
+              <li>Leo tu mensaje y miro tu web y tu ficha de Google antes de responder.</li>
+              <li>Te respondo yo, con preguntas concretas o para hablar por teléfono.</li>
+              <li>Si encaja, te propongo cómo lo haría y cuánto costaría. Sin compromiso.</li>
+            </ol>
+            <p class="despues-email">¿Prefieres el correo de siempre?<br><a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="preguntas" aria-labelledby="titulo-preguntas">
+      <div class="envoltura">
+        <header class="seccion-cab">
+          <p class="rotulo">Preguntas</p>
+          <h2 class="h2" id="titulo-preguntas">Antes de escribirme</h2>
+        </header>
+        <div class="preguntas-bloque">
+          <div class="preguntas">
+            <details class="pregunta">
+              <summary>¿Cuánto cuesta una web?</summary>
+              <div class="respuesta">
+                <p>Depende de lo que necesite tu negocio: cuántas páginas, si va en varios idiomas, si quieres editarla tú, si hay que escribir todos los textos o conseguir fotos. Después de la primera conversación te paso un presupuesto por escrito con el precio y lo que incluye, antes de empezar nada.</p>
+              </div>
+            </details>
+            <details class="pregunta">
+              <summary>¿Cuánto se tarda?</summary>
+              <div class="respuesta">
+                <p>Depende del tamaño de la web y, sobre todo, de tener a tiempo los textos, las fotos y los datos del negocio. Antes de empezar te doy un calendario con fechas para cada paso.</p>
+              </div>
+            </details>
+            <details class="pregunta">
+              <summary>¿Qué tengo que aportar yo?</summary>
+              <div class="respuesta">
+                <p>Una conversación inicial, los datos de tu negocio (horarios, servicios, precios si los publicas), tus fotos si las tienes y el acceso a tu dominio si ya existe. Si faltan fotos, te digo cuáles hacen falta: no pongo fotos de otros como si fueran tuyas.</p>
+              </div>
+            </details>
+            <details class="pregunta">
+              <summary>¿Podré cambiar cosas yo mismo?</summary>
+              <div class="respuesta">
+                <p>Si lo necesitas, sí. En <a href="../proyectos/seriart/">Seriart</a> el dueño cambia textos, fotos y el vídeo de portada desde un panel, y la web se actualiza sola en un par de minutos. Si prefieres no tocar nada, también es una opción.</p>
+              </div>
+            </details>
+            <details class="pregunta">
+              <summary>Ya tengo web. ¿Hay que empezar de cero?</summary>
+              <div class="respuesta">
+                <p>No siempre. Primero reviso lo que tienes y te digo qué merece la pena conservar (textos, dominio, lo que ya funciona en Google) y qué no. Si cambiamos de web, redirijo las direcciones antiguas para no perder visitas.</p>
+              </div>
+            </details>
+            <details class="pregunta">
+              <summary>¿Trabajas solo con negocios de Dénia?</summary>
+              <div class="respuesta">
+                <p>Los proyectos que ves son de Dénia, pero la investigación, las reuniones y las revisiones se pueden hacer a distancia. Si tu negocio está en otro sitio, escríbeme igualmente.</p>
+              </div>
+            </details>
+            <details class="pregunta">
+              <summary>¿De quién es la web cuando está terminada?</summary>
+              <div class="respuesta">
+                <p>Tuya. El dominio y el alojamiento quedan a tu nombre, y te explico qué opciones hay y cuánto cuestan antes de contratar nada.</p>
+              </div>
+            </details>
+          </div>
+          <aside class="nota" aria-label="Nota">
+            <p>No publico precios porque cada negocio necesita cosas distintas. Prefiero darte un precio real para lo tuyo que uno de reclamo que luego cambia.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie" id="pie" data-destino>
+    <div class="envoltura">
+      <div class="pie-in">
+        <div>
+          <p class="pie-firma">Alex Sivera<span>Diseño y desarrollo web para negocios · Dénia</span></p>
+        </div>
+        <nav aria-label="Pie">
+          <h2>Web</h2>
+          <ul>
+            <li><a href="../">Inicio</a></li>
+            <li><a href="../proyectos/">Proyectos</a></li>
+            <li><a href="../como-trabajo/">Cómo trabajo</a></li>
+            <li><a href="../sobre-mi/">Sobre mí</a></li>
+            <li><a href="../contacto/">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Casos</h2>
+          <ul>
+            <li><a href="../proyectos/el-pegoli/">El Pegolí</a></li>
+            <li><a href="../proyectos/seriart/">Seriart</a></li>
+            <li><a href="../proyectos/fisioterapia-denia/">Fisioterapia Dénia</a></li>
+            <li><a href="../proyectos/beekery/">Beekery</a></li>
+            <li><a href="../proyectos/#producto-propio">Apps propias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie-legal">
+        <p>© <span data-anio>2026</span> Alex Sivera · <a href="mailto:alexsivera.1999@gmail.com">alexsivera.1999@gmail.com</a> · <a href="../privacidad/">Privacidad</a></p>
+        <p>Hecha a mano, sin plantilla y sin cookies de seguimiento.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
