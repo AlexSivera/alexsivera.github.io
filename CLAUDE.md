@@ -29,7 +29,9 @@ QA visual con Playwright contra `npm run dev` a 1440, 768 y 390 px.
 
 ## Reglas del proyecto
 
-- **No inventar**: clientes, testimonios, cifras, años de experiencia, precios, plazos. Seriart es el único encargo real (negocio familiar); El Pegolí y Fisioterapia Dénia son «Propuesta de rediseño · sin encargo» y Beekery «Propuesta conceptual · sin encargo». Mantener esas etiquetas y los avisos de marca. Las apps propias van como «Producto propio · uso personal»; la de entrenamiento se muestra sin el nombre Machoke ni el personaje (marca de Nintendo), y LaCuenta solo con su pantalla de acceso (sus datos son reales y privados).
+- **No inventar**: clientes, testimonios, cifras, años de experiencia, precios, plazos. Seriart es el único encargo real; El Pegolí, Fisioterapia Dénia y Beekery son estudios propios sin encargo.
+- **Sin etiquetas de estado** (decisión de Alex, 30/09/2026): no se muestran chips «Propuesta / Encargo real / Producto propio» ni frases del tipo «no son encargos» o «sin encargo», porque restan. Pero **nunca se afirma ni se insinúa que un estudio fue un encargo** (nada de «cliente», «me encargaron», resultados…). En la cabecera de cada caso de un negocio real se mantiene una sola línea discreta, `.aviso`: «Estudio de rediseño independiente, sin relación comercial con…». Cuando haya encargos reales, se podrán destacar como tales.
+- Apps: sección «Aplicaciones». La de entrenamiento va sin el nombre Machoke ni el personaje (marca de Nintendo). LaCuenta solo aparece con su pantalla de acceso, porque sus datos son reales y privados.
 - **Imágenes**: solo capturas propias de los proyectos (Playwright, 2× escritorio / 3× móvil). No mostrar fotos de terceros sin licencia: en Beekery se recortó la foto del pan; en Seriart se usa el fotograma del vídeo propio del taller. Créditos CC visibles en el caso El Pegolí.
 - Paleta papel/tinta/azul lápiz; sin degradados decorativos ni sombras difusas. El azul lápiz es para notas, trazos, enlaces y la hoja de contacto.
 - Tuteo peninsular. Copy concreto y en primera persona.
