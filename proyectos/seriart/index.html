@@ -16,6 +16,8 @@
   <meta property="og:image" content="https://alexsivera.github.io/assets/img/seriart-hero-1200.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
   <link rel="preload" href="../../assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/styles.css">
@@ -57,7 +59,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <ul>
-          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../proyectos/" aria-current="true">Proyectos</a></li>
           <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
           <li><a href="../../sobre-mi/">Sobre mí</a></li>
           <li><a class="nav-contacto" href="../../contacto/">Contacto</a></li>
@@ -82,7 +84,7 @@
       <nav aria-label="Menú móvil">
         <ol>
           <li><a href="../../">Inicio</a></li>
-          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../proyectos/" aria-current="true">Proyectos</a></li>
           <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
           <li><a href="../../sobre-mi/">Sobre mí</a></li>
           <li><a href="../../contacto/">Contacto</a></li>
@@ -107,16 +109,39 @@
     </header>
 
     <div class="envoltura caso-portada">
-      <figure class="figura">
-        <div class="figura-marco">
-          <picture>
-            <source type="image/avif" srcset="../../assets/img/seriart-hero-720.avif 720w, ../../assets/img/seriart-hero-1200.avif 1200w, ../../assets/img/seriart-hero-1800.avif 1800w" sizes="(min-width: 88rem) 82rem, 94vw">
-            <source type="image/webp" srcset="../../assets/img/seriart-hero-720.webp 720w, ../../assets/img/seriart-hero-1200.webp 1200w, ../../assets/img/seriart-hero-1800.webp 1800w" sizes="(min-width: 88rem) 82rem, 94vw">
-            <img src="../../assets/img/seriart-hero-1200.jpg" srcset="../../assets/img/seriart-hero-720.jpg 720w, ../../assets/img/seriart-hero-1200.jpg 1200w, ../../assets/img/seriart-hero-1800.jpg 1800w" sizes="(min-width: 88rem) 82rem, 94vw" width="1200" height="758" fetchpriority="high" alt="Portada de la web de Seriart en escritorio: titular «Rotulación y vinilo profesional en Dénia», botones para pedir presupuesto y ver trabajos, y de fondo el vídeo del taller rotulando una furgoneta.">
-          </picture>
-        </div>
-        <figcaption>Portada en escritorio. El fondo es un fotograma del vídeo del propio taller.</figcaption>
-      </figure>
+      <div class="anotada" data-anotada>
+        <figure class="figura">
+          <div class="figura-marco anotada-marco">
+            <div class="anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/seriart-hero-720.avif 720w, ../../assets/img/seriart-hero-1200.avif 1200w, ../../assets/img/seriart-hero-1800.avif 1800w" sizes="(min-width: 70em) 58vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/seriart-hero-720.webp 720w, ../../assets/img/seriart-hero-1200.webp 1200w, ../../assets/img/seriart-hero-1800.webp 1800w" sizes="(min-width: 70em) 58vw, 94vw">
+                <img src="../../assets/img/seriart-hero-1200.jpg" srcset="../../assets/img/seriart-hero-720.jpg 720w, ../../assets/img/seriart-hero-1200.jpg 1200w, ../../assets/img/seriart-hero-1800.jpg 1800w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="758" fetchpriority="high" alt="Portada de Seriart con cinco marcadores: el vídeo, el titular, el botón de presupuesto, la franja de datos y el botón de WhatsApp.">
+              </picture>
+              <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <g data-n="1"><path class="halo" d="M73.1 71.1C73.7 70.9 75.4 70.1 76.8 69.9C78.1 69.6 79.6 69.5 81.1 69.5C82.5 69.5 84 69.7 85.3 69.9C86.6 70.2 87.8 70.6 88.8 71C89.8 71.5 90.6 72 91.3 72.6C91.9 73.1 92.4 73.8 92.6 74.4C92.7 75.1 92.7 75.7 92.4 76.4C92.1 77 91.6 77.7 90.8 78.2C90 78.8 88.9 79.3 87.7 79.6C86.5 80 85 80.2 83.6 80.3C82.3 80.4 80.7 80.4 79.4 80.2C78.1 80.1 76.7 79.7 75.6 79.4C74.5 79 73.6 78.5 72.8 78C72 77.5 71.4 76.9 71.1 76.3C70.7 75.7 70.5 75 70.6 74.4C70.7 73.8 71 73.1 71.6 72.5C72.2 72 73.1 71.4 74.1 71C75.1 70.5 77.2 70.1 77.8 70"/><path d="M73.1 71.1C73.7 70.9 75.4 70.1 76.8 69.9C78.1 69.6 79.6 69.5 81.1 69.5C82.5 69.5 84 69.7 85.3 69.9C86.6 70.2 87.8 70.6 88.8 71C89.8 71.5 90.6 72 91.3 72.6C91.9 73.1 92.4 73.8 92.6 74.4C92.7 75.1 92.7 75.7 92.4 76.4C92.1 77 91.6 77.7 90.8 78.2C90 78.8 88.9 79.3 87.7 79.6C86.5 80 85 80.2 83.6 80.3C82.3 80.4 80.7 80.4 79.4 80.2C78.1 80.1 76.7 79.7 75.6 79.4C74.5 79 73.6 78.5 72.8 78C72 77.5 71.4 76.9 71.1 76.3C70.7 75.7 70.5 75 70.6 74.4C70.7 73.8 71 73.1 71.6 72.5C72.2 72 73.1 71.4 74.1 71C75.1 70.5 77.2 70.1 77.8 70"/></g>
+                <g data-n="2"><path class="halo" d="M0.6 49.3C1 48.3 1.4 45.4 3 43.8C4.5 42.1 7.1 40.5 9.9 39.2C12.7 38 16.4 36.9 20 36.3C23.6 35.6 27.6 35.3 31.4 35.2C35.2 35.1 39.2 35.4 42.9 35.9C46.5 36.4 50.1 37.2 53.2 38.2C56.2 39.3 59.1 40.6 61.2 42.1C63.3 43.5 65 45.3 65.6 47.1C66.3 48.8 66.2 50.8 65.3 52.5C64.4 54.3 62.6 56 60.2 57.4C57.9 58.9 54.7 60.1 51.4 61C48.1 61.9 44.2 62.5 40.5 62.8C36.8 63.1 32.9 63 29.2 62.8C25.6 62.5 21.9 61.9 18.6 61.1C15.4 60.3 12.2 59.2 9.7 57.9C7.3 56.6 5.1 55 3.8 53.4C2.6 51.8 1.9 49.9 2.2 48.2C2.4 46.4 4.9 43.9 5.4 43"/><path d="M0.6 49.3C1 48.3 1.4 45.4 3 43.8C4.5 42.1 7.1 40.5 9.9 39.2C12.7 38 16.4 36.9 20 36.3C23.6 35.6 27.6 35.3 31.4 35.2C35.2 35.1 39.2 35.4 42.9 35.9C46.5 36.4 50.1 37.2 53.2 38.2C56.2 39.3 59.1 40.6 61.2 42.1C63.3 43.5 65 45.3 65.6 47.1C66.3 48.8 66.2 50.8 65.3 52.5C64.4 54.3 62.6 56 60.2 57.4C57.9 58.9 54.7 60.1 51.4 61C48.1 61.9 44.2 62.5 40.5 62.8C36.8 63.1 32.9 63 29.2 62.8C25.6 62.5 21.9 61.9 18.6 61.1C15.4 60.3 12.2 59.2 9.7 57.9C7.3 56.6 5.1 55 3.8 53.4C2.6 51.8 1.9 49.9 2.2 48.2C2.4 46.4 4.9 43.9 5.4 43"/></g>
+                <g data-n="3"><path class="halo" d="M7 70.3C7.6 70.1 9.2 69.4 10.4 69.1C11.6 68.8 13 68.5 14.3 68.5C15.7 68.4 17.2 68.5 18.5 68.7C19.8 68.9 21.1 69.3 22.2 69.8C23.2 70.3 24.2 70.9 24.8 71.6C25.4 72.3 25.8 73.1 25.9 73.8C26 74.6 25.7 75.4 25.3 76C24.9 76.7 24.2 77.4 23.4 78C22.5 78.5 21.5 79 20.4 79.4C19.3 79.8 18 80.1 16.7 80.2C15.5 80.4 14 80.4 12.7 80.3C11.4 80.2 10 80 8.8 79.6C7.7 79.2 6.6 78.7 5.8 78.1C5 77.5 4.4 76.8 4.1 76.1C3.8 75.3 3.8 74.5 4 73.8C4.3 73.1 4.8 72.4 5.5 71.8C6.1 71.2 7 70.7 8 70.2C9 69.8 10.8 69.3 11.3 69.2"/><path d="M7 70.3C7.6 70.1 9.2 69.4 10.4 69.1C11.6 68.8 13 68.5 14.3 68.5C15.7 68.4 17.2 68.5 18.5 68.7C19.8 68.9 21.1 69.3 22.2 69.8C23.2 70.3 24.2 70.9 24.8 71.6C25.4 72.3 25.8 73.1 25.9 73.8C26 74.6 25.7 75.4 25.3 76C24.9 76.7 24.2 77.4 23.4 78C22.5 78.5 21.5 79 20.4 79.4C19.3 79.8 18 80.1 16.7 80.2C15.5 80.4 14 80.4 12.7 80.3C11.4 80.2 10 80 8.8 79.6C7.7 79.2 6.6 78.7 5.8 78.1C5 77.5 4.4 76.8 4.1 76.1C3.8 75.3 3.8 74.5 4 73.8C4.3 73.1 4.8 72.4 5.5 71.8C6.1 71.2 7 70.7 8 70.2C9 69.8 10.8 69.3 11.3 69.2"/></g>
+                <g data-n="4"><path class="halo" d="M3.4 90.5C4 90.1 4.6 88.8 6.6 88.1C8.6 87.3 11.6 86.6 15.3 85.9C19.1 85.3 24 84.7 29.2 84.3C34.4 83.9 40.7 83.7 46.6 83.6C52.5 83.5 59.1 83.6 64.7 83.9C70.3 84.2 75.8 84.7 80.2 85.2C84.6 85.8 88.2 86.5 90.8 87.2C93.4 87.9 95 88.8 95.6 89.5C96.3 90.3 96 91.2 94.7 91.9C93.5 92.7 91.4 93.5 88.4 94.2C85.4 94.8 81.3 95.5 76.7 96C72.1 96.5 66.5 96.9 60.9 97.1C55.2 97.3 48.8 97.3 43.1 97.2C37.3 97 31.4 96.7 26.6 96.3C21.7 95.8 17.4 95.2 14.1 94.6C10.9 93.9 8.5 93.1 7.2 92.4C5.8 91.6 5.4 90.8 5.9 90C6.3 89.3 9.3 88.1 10 87.8"/><path d="M3.4 90.5C4 90.1 4.6 88.8 6.6 88.1C8.6 87.3 11.6 86.6 15.3 85.9C19.1 85.3 24 84.7 29.2 84.3C34.4 83.9 40.7 83.7 46.6 83.6C52.5 83.5 59.1 83.6 64.7 83.9C70.3 84.2 75.8 84.7 80.2 85.2C84.6 85.8 88.2 86.5 90.8 87.2C93.4 87.9 95 88.8 95.6 89.5C96.3 90.3 96 91.2 94.7 91.9C93.5 92.7 91.4 93.5 88.4 94.2C85.4 94.8 81.3 95.5 76.7 96C72.1 96.5 66.5 96.9 60.9 97.1C55.2 97.3 48.8 97.3 43.1 97.2C37.3 97 31.4 96.7 26.6 96.3C21.7 95.8 17.4 95.2 14.1 94.6C10.9 93.9 8.5 93.1 7.2 92.4C5.8 91.6 5.4 90.8 5.9 90C6.3 89.3 9.3 88.1 10 87.8"/></g>
+                <g data-n="5"><path class="halo" d="M94.6 94.4C94.6 94.2 94.6 93.4 94.7 92.9C94.8 92.4 95 91.9 95.2 91.5C95.4 91.1 95.8 90.8 96.1 90.6C96.4 90.4 96.7 90.3 97 90.3C97.4 90.2 97.7 90.4 98 90.5C98.3 90.7 98.6 91 98.9 91.3C99.1 91.6 99.3 92 99.5 92.4C99.6 92.9 99.8 93.4 99.8 93.8C99.9 94.3 99.9 94.9 99.8 95.4C99.8 95.9 99.7 96.4 99.5 96.8C99.3 97.3 99 97.7 98.8 97.9C98.5 98.2 98.2 98.4 97.8 98.5C97.5 98.6 97.2 98.6 96.9 98.5C96.6 98.3 96.2 98.1 96 97.9C95.7 97.6 95.5 97.3 95.3 96.9C95.1 96.5 94.9 96.1 94.8 95.6C94.7 95.2 94.7 94.6 94.7 94.1C94.7 93.7 94.8 92.9 94.9 92.7"/><path d="M94.6 94.4C94.6 94.2 94.6 93.4 94.7 92.9C94.8 92.4 95 91.9 95.2 91.5C95.4 91.1 95.8 90.8 96.1 90.6C96.4 90.4 96.7 90.3 97 90.3C97.4 90.2 97.7 90.4 98 90.5C98.3 90.7 98.6 91 98.9 91.3C99.1 91.6 99.3 92 99.5 92.4C99.6 92.9 99.8 93.4 99.8 93.8C99.9 94.3 99.9 94.9 99.8 95.4C99.8 95.9 99.7 96.4 99.5 96.8C99.3 97.3 99 97.7 98.8 97.9C98.5 98.2 98.2 98.4 97.8 98.5C97.5 98.6 97.2 98.6 96.9 98.5C96.6 98.3 96.2 98.1 96 97.9C95.7 97.6 95.5 97.3 95.3 96.9C95.1 96.5 94.9 96.1 94.8 95.6C94.7 95.2 94.7 94.6 94.7 94.1C94.7 93.7 94.8 92.9 94.9 92.7"/></g>
+              </svg>
+              <span class="marca" data-n="1" style="--x:71.9%; --y:69.3%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:2.5%; --y:49.3%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:5.8%; --y:68.5%" aria-hidden="true">3</span>
+              <span class="marca" data-n="4" style="--x:2.8%; --y:90.5%" aria-hidden="true">4</span>
+              <span class="marca" data-n="5" style="--x:94%; --y:94.4%" aria-hidden="true">5</span>
+            </div>
+          </div>
+          <figcaption>Portada en escritorio. El fondo es un fotograma del vídeo del propio taller.</figcaption>
+        </figure>
+        <ol class="decisiones">
+          <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>El taller, en movimiento</h3><p>El vídeo se puede pausar. Si el visitante tiene activado «reducir movimiento» en su dispositivo, ve una imagen fija.</p></div></li>
+          <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>Qué y dónde, a la primera</h3><p>«Rotulación y vinilo profesional en Dénia»: las palabras con las que la gente lo busca, en el titular.</p></div></li>
+          <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Un botón que manda</h3><p>«Pedir presupuesto» es el único botón relleno. «Ver trabajos» queda en segundo plano.</p></div></li>
+          <li data-n="4" tabindex="0"><span aria-hidden="true">4</span><div><h3>Cuatro razones, sin adornos</h3><p>Desde 2002, taller propio, instalación incluida y envíos a toda España. Datos del negocio, no eslóganes.</p></div></li>
+          <li data-n="5" tabindex="0"><span aria-hidden="true">5</span><div><h3>WhatsApp siempre a mano</h3><p>Para quien prefiere mandar una foto de su furgoneta antes que rellenar un formulario.</p></div></li>
+        </ol>
+      </div>
     </div>
 
     <div class="envoltura">
@@ -167,40 +192,22 @@
 
         <div class="anotada" data-anotada>
           <figure class="figura">
-            <div class="figura-marco anotada-img">
-              <picture>
-                <source type="image/avif" srcset="../../assets/img/seriart-hero-720.avif 720w, ../../assets/img/seriart-hero-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <source type="image/webp" srcset="../../assets/img/seriart-hero-720.webp 720w, ../../assets/img/seriart-hero-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <img src="../../assets/img/seriart-hero-720.jpg" srcset="../../assets/img/seriart-hero-720.jpg 720w, ../../assets/img/seriart-hero-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="758" loading="lazy" decoding="async" alt="Portada de Seriart con cinco marcadores: el vídeo, el titular, el botón de presupuesto, la franja de datos y el botón de WhatsApp.">
-              </picture>
-              <span class="marca" data-n="1" style="--x:78%; --y:30%" aria-hidden="true">1</span>
-              <span class="marca" data-n="2" style="--x:6%; --y:44%" aria-hidden="true">2</span>
-              <span class="marca" data-n="3" style="--x:7%; --y:71%" aria-hidden="true">3</span>
-              <span class="marca" data-n="4" style="--x:6%; --y:88%" aria-hidden="true">4</span>
-              <span class="marca" data-n="5" style="--x:92%; --y:90%" aria-hidden="true">5</span>
-            </div>
-            <figcaption>La portada.</figcaption>
-          </figure>
-          <ol class="decisiones">
-            <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>El taller, en movimiento</h3><p>El vídeo se puede pausar. Si el visitante tiene activado «reducir movimiento» en su dispositivo, ve una imagen fija.</p></div></li>
-            <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>Qué y dónde, a la primera</h3><p>«Rotulación y vinilo profesional en Dénia»: las palabras con las que la gente lo busca, en el titular.</p></div></li>
-            <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Un botón que manda</h3><p>«Pedir presupuesto» es el único botón relleno. «Ver trabajos» queda en segundo plano.</p></div></li>
-            <li data-n="4" tabindex="0"><span aria-hidden="true">4</span><div><h3>Cuatro razones, sin adornos</h3><p>Desde 2002, taller propio, instalación incluida y envíos a toda España. Datos del negocio, no eslóganes.</p></div></li>
-            <li data-n="5" tabindex="0"><span aria-hidden="true">5</span><div><h3>WhatsApp siempre a mano</h3><p>Para quien prefiere mandar una foto de su furgoneta antes que rellenar un formulario.</p></div></li>
-          </ol>
-        </div>
-
-        <div class="anotada" data-anotada>
-          <figure class="figura">
-            <div class="figura-marco anotada-img">
-              <picture>
-                <source type="image/avif" srcset="../../assets/img/seriart-cta-720.avif 720w, ../../assets/img/seriart-cta-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <source type="image/webp" srcset="../../assets/img/seriart-cta-720.webp 720w, ../../assets/img/seriart-cta-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <img src="../../assets/img/seriart-cta-720.jpg" srcset="../../assets/img/seriart-cta-720.jpg 720w, ../../assets/img/seriart-cta-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="462" loading="lazy" decoding="async" alt="Bloque «Cuéntanos tu proyecto» con tres opciones apiladas: pedir presupuesto por formulario, WhatsApp y llamar con el horario.">
-              </picture>
-              <span class="marca" data-n="1" style="--x:51.5%; --y:30%" aria-hidden="true">1</span>
-              <span class="marca" data-n="2" style="--x:51.5%; --y:50%" aria-hidden="true">2</span>
-              <span class="marca" data-n="3" style="--x:51.5%; --y:70%" aria-hidden="true">3</span>
+            <div class="figura-marco anotada-marco">
+              <div class="anotada-img">
+                <picture>
+                  <source type="image/avif" srcset="../../assets/img/seriart-cta-720.avif 720w, ../../assets/img/seriart-cta-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <source type="image/webp" srcset="../../assets/img/seriart-cta-720.webp 720w, ../../assets/img/seriart-cta-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <img src="../../assets/img/seriart-cta-720.jpg" srcset="../../assets/img/seriart-cta-720.jpg 720w, ../../assets/img/seriart-cta-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="462" loading="lazy" decoding="async" alt="Bloque «Cuéntanos tu proyecto» con tres opciones apiladas: pedir presupuesto por formulario, WhatsApp y llamar con el horario.">
+                </picture>
+                <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <g data-n="1"><path class="halo" d="M45.8 30.3C46.1 29.5 46.4 27 47.5 25.5C48.5 24 50.2 22.5 52.3 21.3C54.4 20.1 57.1 18.9 60 18.2C62.9 17.4 66.4 16.9 69.7 16.8C73 16.7 76.6 16.9 79.7 17.4C82.8 18 85.9 18.9 88.3 20C90.7 21.1 92.7 22.5 94.1 23.9C95.6 25.3 96.5 26.8 96.9 28.4C97.2 29.9 97.1 31.5 96.5 33.1C95.8 34.6 94.6 36.1 93 37.4C91.3 38.8 89.1 40.1 86.5 41C84 41.9 80.8 42.7 77.6 43.1C74.5 43.5 70.9 43.5 67.8 43.3C64.6 43 61.3 42.3 58.7 41.5C56 40.6 53.6 39.4 51.8 38.1C50 36.8 48.7 35.3 48 33.9C47.2 32.4 46.9 30.8 47.1 29.3C47.4 27.8 48.9 25.6 49.3 24.9"/><path d="M45.8 30.3C46.1 29.5 46.4 27 47.5 25.5C48.5 24 50.2 22.5 52.3 21.3C54.4 20.1 57.1 18.9 60 18.2C62.9 17.4 66.4 16.9 69.7 16.8C73 16.7 76.6 16.9 79.7 17.4C82.8 18 85.9 18.9 88.3 20C90.7 21.1 92.7 22.5 94.1 23.9C95.6 25.3 96.5 26.8 96.9 28.4C97.2 29.9 97.1 31.5 96.5 33.1C95.8 34.6 94.6 36.1 93 37.4C91.3 38.8 89.1 40.1 86.5 41C84 41.9 80.8 42.7 77.6 43.1C74.5 43.5 70.9 43.5 67.8 43.3C64.6 43 61.3 42.3 58.7 41.5C56 40.6 53.6 39.4 51.8 38.1C50 36.8 48.7 35.3 48 33.9C47.2 32.4 46.9 30.8 47.1 29.3C47.4 27.8 48.9 25.6 49.3 24.9"/></g>
+                  <g data-n="2"><path class="halo" d="M44.9 50.5C45.1 49.7 45.2 47.2 46.3 45.7C47.5 44.2 49.4 42.7 51.7 41.5C53.9 40.3 57 39.3 60 38.7C63 38.1 66.6 37.8 69.8 37.8C73 37.7 76.4 38.1 79.4 38.6C82.4 39.1 85.2 39.9 87.7 40.9C90.1 41.8 92.3 43 93.9 44.3C95.6 45.6 96.9 47.1 97.5 48.6C98.1 50.1 98.2 51.8 97.6 53.4C97 54.9 95.7 56.5 93.9 57.8C92.1 59.1 89.5 60.3 86.7 61.1C84 62 80.7 62.5 77.5 62.8C74.4 63 71 63 67.9 62.7C64.9 62.3 61.9 61.7 59.2 60.9C56.6 60.2 54.2 59.1 52.3 58C50.3 56.8 48.7 55.5 47.7 54.1C46.6 52.7 46 51.1 46.1 49.6C46.2 48 47.9 45.8 48.2 45"/><path d="M44.9 50.5C45.1 49.7 45.2 47.2 46.3 45.7C47.5 44.2 49.4 42.7 51.7 41.5C53.9 40.3 57 39.3 60 38.7C63 38.1 66.6 37.8 69.8 37.8C73 37.7 76.4 38.1 79.4 38.6C82.4 39.1 85.2 39.9 87.7 40.9C90.1 41.8 92.3 43 93.9 44.3C95.6 45.6 96.9 47.1 97.5 48.6C98.1 50.1 98.2 51.8 97.6 53.4C97 54.9 95.7 56.5 93.9 57.8C92.1 59.1 89.5 60.3 86.7 61.1C84 62 80.7 62.5 77.5 62.8C74.4 63 71 63 67.9 62.7C64.9 62.3 61.9 61.7 59.2 60.9C56.6 60.2 54.2 59.1 52.3 58C50.3 56.8 48.7 55.5 47.7 54.1C46.6 52.7 46 51.1 46.1 49.6C46.2 48 47.9 45.8 48.2 45"/></g>
+                  <g data-n="3"><path class="halo" d="M44.2 70.5C44.6 69.7 45.2 67.2 46.5 65.7C47.9 64.3 50 62.9 52.4 61.8C54.7 60.7 57.6 59.8 60.5 59.2C63.4 58.6 66.7 58.3 69.8 58.1C73 58 76.3 58.2 79.4 58.6C82.4 59 85.6 59.6 88.2 60.6C90.8 61.5 93.3 62.7 95 64C96.7 65.4 97.9 67 98.4 68.6C98.9 70.1 98.6 71.9 97.8 73.4C96.9 74.9 95.2 76.4 93.3 77.6C91.4 78.8 88.7 79.9 86.1 80.7C83.4 81.4 80.3 82 77.3 82.3C74.3 82.6 71 82.7 68 82.5C64.9 82.3 61.7 81.9 59 81.2C56.2 80.5 53.5 79.5 51.4 78.3C49.3 77.2 47.6 75.7 46.6 74.2C45.6 72.8 45.3 71.1 45.6 69.5C45.9 68 48.1 65.8 48.6 65.1"/><path d="M44.2 70.5C44.6 69.7 45.2 67.2 46.5 65.7C47.9 64.3 50 62.9 52.4 61.8C54.7 60.7 57.6 59.8 60.5 59.2C63.4 58.6 66.7 58.3 69.8 58.1C73 58 76.3 58.2 79.4 58.6C82.4 59 85.6 59.6 88.2 60.6C90.8 61.5 93.3 62.7 95 64C96.7 65.4 97.9 67 98.4 68.6C98.9 70.1 98.6 71.9 97.8 73.4C96.9 74.9 95.2 76.4 93.3 77.6C91.4 78.8 88.7 79.9 86.1 80.7C83.4 81.4 80.3 82 77.3 82.3C74.3 82.6 71 82.7 68 82.5C64.9 82.3 61.7 81.9 59 81.2C56.2 80.5 53.5 79.5 51.4 78.3C49.3 77.2 47.6 75.7 46.6 74.2C45.6 72.8 45.3 71.1 45.6 69.5C45.9 68 48.1 65.8 48.6 65.1"/></g>
+                </svg>
+                <span class="marca" data-n="1" style="--x:45.2%; --y:30.3%" aria-hidden="true">1</span>
+                <span class="marca" data-n="2" style="--x:44.3%; --y:50.5%" aria-hidden="true">2</span>
+                <span class="marca" data-n="3" style="--x:43.6%; --y:70.5%" aria-hidden="true">3</span>
+              </div>
             </div>
             <figcaption>El cierre de cada página.</figcaption>
           </figure>

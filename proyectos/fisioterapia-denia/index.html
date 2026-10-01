@@ -16,6 +16,8 @@
   <meta property="og:image" content="https://alexsivera.github.io/assets/img/fisio-hero-1200.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
   <link rel="preload" href="../../assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/styles.css">
@@ -48,7 +50,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <ul>
-          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../proyectos/" aria-current="true">Proyectos</a></li>
           <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
           <li><a href="../../sobre-mi/">Sobre mí</a></li>
           <li><a class="nav-contacto" href="../../contacto/">Contacto</a></li>
@@ -73,7 +75,7 @@
       <nav aria-label="Menú móvil">
         <ol>
           <li><a href="../../">Inicio</a></li>
-          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../proyectos/" aria-current="true">Proyectos</a></li>
           <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
           <li><a href="../../sobre-mi/">Sobre mí</a></li>
           <li><a href="../../contacto/">Contacto</a></li>
@@ -98,16 +100,39 @@
     </header>
 
     <div class="envoltura caso-portada">
-      <figure class="figura">
-        <div class="figura-marco">
-          <picture>
-            <source type="image/avif" srcset="../../assets/img/fisio-hero-720.avif 720w, ../../assets/img/fisio-hero-1200.avif 1200w, ../../assets/img/fisio-hero-1800.avif 1800w" sizes="(min-width: 88rem) 82rem, 94vw">
-            <source type="image/webp" srcset="../../assets/img/fisio-hero-720.webp 720w, ../../assets/img/fisio-hero-1200.webp 1200w, ../../assets/img/fisio-hero-1800.webp 1800w" sizes="(min-width: 88rem) 82rem, 94vw">
-            <img src="../../assets/img/fisio-hero-1200.jpg" srcset="../../assets/img/fisio-hero-720.jpg 720w, ../../assets/img/fisio-hero-1200.jpg 1200w, ../../assets/img/fisio-hero-1800.jpg 1800w" sizes="(min-width: 88rem) 82rem, 94vw" width="1200" height="825" fetchpriority="high" alt="Portada del rediseño para Fisioterapia Dénia: titular en serif azul, botón «Reservar cita» con el teléfono, cifras de trayectoria y un arco con la mariposa del logotipo donde irá el retrato de Yolanda.">
-          </picture>
-        </div>
-        <figcaption>Portada en escritorio.</figcaption>
-      </figure>
+      <div class="anotada" data-anotada>
+        <figure class="figura">
+          <div class="figura-marco anotada-marco">
+            <div class="anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/fisio-hero-720.avif 720w, ../../assets/img/fisio-hero-1200.avif 1200w, ../../assets/img/fisio-hero-1800.avif 1800w" sizes="(min-width: 70em) 58vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/fisio-hero-720.webp 720w, ../../assets/img/fisio-hero-1200.webp 1200w, ../../assets/img/fisio-hero-1800.webp 1800w" sizes="(min-width: 70em) 58vw, 94vw">
+                <img src="../../assets/img/fisio-hero-1200.jpg" srcset="../../assets/img/fisio-hero-720.jpg 720w, ../../assets/img/fisio-hero-1200.jpg 1200w, ../../assets/img/fisio-hero-1800.jpg 1800w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="825" fetchpriority="high" alt="Portada con cinco marcadores: titular, botón de reserva, hueco de la foto, aviso de servicio a domicilio y cifras.">
+              </picture>
+              <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <g data-n="1"><path class="halo" d="M1.9 35.5C2.2 34.1 2.8 29.7 3.9 27.1C5.1 24.5 6.7 21.9 8.7 19.8C10.6 17.7 13.1 15.8 15.7 14.4C18.3 13.1 21.4 12.1 24.4 11.7C27.4 11.4 30.7 11.6 33.7 12.4C36.6 13.3 39.5 14.8 41.9 16.7C44.2 18.6 46.2 21.1 47.6 23.7C48.9 26.2 49.7 29.3 50 32.1C50.2 34.9 49.9 37.9 49.2 40.5C48.4 43.2 47.1 45.9 45.5 48.2C43.9 50.4 41.8 52.6 39.5 54.2C37.2 55.9 34.4 57.3 31.6 58C28.8 58.8 25.5 59.1 22.6 58.7C19.7 58.4 16.5 57.4 14 55.9C11.4 54.5 9 52.3 7.3 50C5.6 47.7 4.3 44.9 3.6 42.2C3 39.5 2.9 36.5 3.2 33.8C3.6 31.1 5.3 27.3 5.7 26"/><path d="M1.9 35.5C2.2 34.1 2.8 29.7 3.9 27.1C5.1 24.5 6.7 21.9 8.7 19.8C10.6 17.7 13.1 15.8 15.7 14.4C18.3 13.1 21.4 12.1 24.4 11.7C27.4 11.4 30.7 11.6 33.7 12.4C36.6 13.3 39.5 14.8 41.9 16.7C44.2 18.6 46.2 21.1 47.6 23.7C48.9 26.2 49.7 29.3 50 32.1C50.2 34.9 49.9 37.9 49.2 40.5C48.4 43.2 47.1 45.9 45.5 48.2C43.9 50.4 41.8 52.6 39.5 54.2C37.2 55.9 34.4 57.3 31.6 58C28.8 58.8 25.5 59.1 22.6 58.7C19.7 58.4 16.5 57.4 14 55.9C11.4 54.5 9 52.3 7.3 50C5.6 47.7 4.3 44.9 3.6 42.2C3 39.5 2.9 36.5 3.2 33.8C3.6 31.1 5.3 27.3 5.7 26"/></g>
+                <g data-n="2"><path class="halo" d="M6.7 66.6C7.5 66.4 9.7 65.5 11.4 65.2C13.1 64.8 15.1 64.7 16.9 64.7C18.8 64.7 20.8 64.9 22.4 65.2C24.1 65.5 25.7 66 27 66.5C28.3 67 29.4 67.7 30.2 68.4C30.9 69 31.5 69.8 31.7 70.6C32 71.3 31.9 72.1 31.5 72.9C31.1 73.6 30.4 74.4 29.4 75C28.4 75.7 27 76.3 25.5 76.7C23.9 77.2 22.1 77.5 20.3 77.6C18.5 77.7 16.5 77.7 14.8 77.5C13 77.3 11.3 76.9 9.9 76.5C8.4 76.1 7.2 75.5 6.2 74.8C5.2 74.2 4.5 73.5 4 72.8C3.6 72.1 3.4 71.3 3.5 70.6C3.7 69.8 4.1 69 4.8 68.3C5.6 67.7 6.7 67 8 66.5C9.3 66 11.9 65.5 12.7 65.3"/><path d="M6.7 66.6C7.5 66.4 9.7 65.5 11.4 65.2C13.1 64.8 15.1 64.7 16.9 64.7C18.8 64.7 20.8 64.9 22.4 65.2C24.1 65.5 25.7 66 27 66.5C28.3 67 29.4 67.7 30.2 68.4C30.9 69 31.5 69.8 31.7 70.6C32 71.3 31.9 72.1 31.5 72.9C31.1 73.6 30.4 74.4 29.4 75C28.4 75.7 27 76.3 25.5 76.7C23.9 77.2 22.1 77.5 20.3 77.6C18.5 77.7 16.5 77.7 14.8 77.5C13 77.3 11.3 76.9 9.9 76.5C8.4 76.1 7.2 75.5 6.2 74.8C5.2 74.2 4.5 73.5 4 72.8C3.6 72.1 3.4 71.3 3.5 70.6C3.7 69.8 4.1 69 4.8 68.3C5.6 67.7 6.7 67 8 66.5C9.3 66 11.9 65.5 12.7 65.3"/></g>
+                <g data-n="3"><path class="halo" d="M58.6 52.5C58.8 50.2 59 42.8 59.9 38.5C60.8 34.2 62.3 29.9 64 26.6C65.8 23.4 68 20.7 70.2 19C72.5 17.3 75 16.4 77.3 16.3C79.7 16.2 82.1 17 84.3 18.3C86.5 19.7 88.7 21.8 90.6 24.5C92.4 27.1 94.2 30.5 95.4 34.3C96.7 38 97.7 42.6 98.1 47C98.6 51.4 98.6 56.4 98.1 60.9C97.6 65.3 96.5 69.9 95 73.6C93.6 77.2 91.7 80.5 89.6 82.8C87.6 85.1 85.2 86.6 82.9 87.3C80.7 88.1 78.2 87.9 76 87.1C73.7 86.4 71.5 84.8 69.5 82.7C67.6 80.6 65.7 77.7 64.2 74.5C62.7 71.2 61.4 67.2 60.6 63.1C59.8 58.9 59.4 54.1 59.5 49.7C59.6 45.3 61 38.8 61.3 36.6"/><path d="M58.6 52.5C58.8 50.2 59 42.8 59.9 38.5C60.8 34.2 62.3 29.9 64 26.6C65.8 23.4 68 20.7 70.2 19C72.5 17.3 75 16.4 77.3 16.3C79.7 16.2 82.1 17 84.3 18.3C86.5 19.7 88.7 21.8 90.6 24.5C92.4 27.1 94.2 30.5 95.4 34.3C96.7 38 97.7 42.6 98.1 47C98.6 51.4 98.6 56.4 98.1 60.9C97.6 65.3 96.5 69.9 95 73.6C93.6 77.2 91.7 80.5 89.6 82.8C87.6 85.1 85.2 86.6 82.9 87.3C80.7 88.1 78.2 87.9 76 87.1C73.7 86.4 71.5 84.8 69.5 82.7C67.6 80.6 65.7 77.7 64.2 74.5C62.7 71.2 61.4 67.2 60.6 63.1C59.8 58.9 59.4 54.1 59.5 49.7C59.6 45.3 61 38.8 61.3 36.6"/></g>
+                <g data-n="4"><path class="halo" d="M60.6 65.9C61.3 65.6 63.3 64.7 64.9 64.3C66.4 63.9 68.1 63.6 69.7 63.5C71.4 63.5 73.2 63.6 74.8 63.8C76.4 64.1 78.1 64.6 79.4 65.3C80.8 65.9 82 66.7 82.8 67.6C83.6 68.5 84.1 69.6 84.2 70.6C84.3 71.6 84 72.7 83.5 73.6C83 74.5 82 75.4 81 76.2C80 76.9 78.6 77.5 77.3 78C75.9 78.5 74.3 78.9 72.7 79.1C71.1 79.3 69.4 79.4 67.7 79.2C66.1 79.1 64.4 78.8 63 78.3C61.5 77.8 60.1 77.1 59.1 76.3C58.1 75.5 57.3 74.5 56.9 73.6C56.6 72.6 56.5 71.6 56.8 70.6C57.1 69.7 57.8 68.7 58.6 67.9C59.4 67.1 60.6 66.3 61.8 65.8C63.1 65.2 65.3 64.6 66 64.4"/><path d="M60.6 65.9C61.3 65.6 63.3 64.7 64.9 64.3C66.4 63.9 68.1 63.6 69.7 63.5C71.4 63.5 73.2 63.6 74.8 63.8C76.4 64.1 78.1 64.6 79.4 65.3C80.8 65.9 82 66.7 82.8 67.6C83.6 68.5 84.1 69.6 84.2 70.6C84.3 71.6 84 72.7 83.5 73.6C83 74.5 82 75.4 81 76.2C80 76.9 78.6 77.5 77.3 78C75.9 78.5 74.3 78.9 72.7 79.1C71.1 79.3 69.4 79.4 67.7 79.2C66.1 79.1 64.4 78.8 63 78.3C61.5 77.8 60.1 77.1 59.1 76.3C58.1 75.5 57.3 74.5 56.9 73.6C56.6 72.6 56.5 71.6 56.8 70.6C57.1 69.7 57.8 68.7 58.6 67.9C59.4 67.1 60.6 66.3 61.8 65.8C63.1 65.2 65.3 64.6 66 64.4"/></g>
+                <g data-n="5"><path class="halo" d="M2.3 86.3C2.6 85.8 3.1 84.4 4.3 83.5C5.6 82.6 7.4 81.8 9.6 81C11.9 80.3 14.7 79.7 17.8 79.2C20.9 78.8 24.6 78.4 28.1 78.3C31.6 78.3 35.5 78.4 38.9 78.7C42.2 79 45.6 79.5 48.2 80.1C50.9 80.7 53.1 81.6 54.6 82.4C56.2 83.3 57.1 84.2 57.4 85.1C57.8 86.1 57.5 87 56.7 87.9C56 88.8 54.6 89.7 52.8 90.4C51 91.2 48.6 91.9 45.9 92.5C43.2 93.1 39.8 93.5 36.5 93.8C33.2 94 29.4 94.1 26 93.9C22.6 93.8 19 93.4 16 92.9C13.1 92.4 10.5 91.7 8.5 91C6.6 90.2 5.2 89.3 4.4 88.4C3.6 87.5 3.4 86.6 3.8 85.7C4.1 84.8 5.9 83.5 6.4 83.1"/><path d="M2.3 86.3C2.6 85.8 3.1 84.4 4.3 83.5C5.6 82.6 7.4 81.8 9.6 81C11.9 80.3 14.7 79.7 17.8 79.2C20.9 78.8 24.6 78.4 28.1 78.3C31.6 78.3 35.5 78.4 38.9 78.7C42.2 79 45.6 79.5 48.2 80.1C50.9 80.7 53.1 81.6 54.6 82.4C56.2 83.3 57.1 84.2 57.4 85.1C57.8 86.1 57.5 87 56.7 87.9C56 88.8 54.6 89.7 52.8 90.4C51 91.2 48.6 91.9 45.9 92.5C43.2 93.1 39.8 93.5 36.5 93.8C33.2 94 29.4 94.1 26 93.9C22.6 93.8 19 93.4 16 92.9C13.1 92.4 10.5 91.7 8.5 91C6.6 90.2 5.2 89.3 4.4 88.4C3.6 87.5 3.4 86.6 3.8 85.7C4.1 84.8 5.9 83.5 6.4 83.1"/></g>
+              </svg>
+              <span class="marca" data-n="1" style="--x:2.5%; --y:35.5%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:5.5%; --y:64.8%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:58%; --y:52.5%" aria-hidden="true">3</span>
+              <span class="marca" data-n="4" style="--x:59.4%; --y:64.1%" aria-hidden="true">4</span>
+              <span class="marca" data-n="5" style="--x:2.5%; --y:86.3%" aria-hidden="true">5</span>
+            </div>
+          </div>
+          <figcaption>Portada en escritorio.</figcaption>
+        </figure>
+        <ol class="decisiones">
+          <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>Qué, dónde y cómo</h3><p>«Fisioterapia y osteopatía en Dénia» es lo que escribe un paciente en Google. «A la medida de cada persona» es su forma de trabajar.</p></div></li>
+          <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>El número dentro del botón</h3><p>La cita se pide por teléfono, así que el botón lo dice y lo muestra: nadie tiene que buscarlo.</p></div></li>
+          <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Un hueco honesto</h3><p>No se ha puesto la foto de otra fisioterapeuta sacada de un banco de imágenes. El hueco queda marcado hasta tener su retrato.</p></div></li>
+          <li data-n="4" tabindex="0"><span aria-hidden="true">4</span><div><h3>También a domicilio</h3><p>Para quien no puede desplazarse, este servicio decide la llamada. Por eso aparece ya en la portada.</p></div></li>
+          <li data-n="5" tabindex="0"><span aria-hidden="true">5</span><div><h3>Trayectoria en cifras reales</h3><p>Años de experiencia y consulta propia desde 2003, sacados de su propia trayectoria. Ni una cifra inventada.</p></div></li>
+        </ol>
+      </div>
     </div>
 
     <div class="envoltura">
@@ -165,40 +190,22 @@
 
         <div class="anotada" data-anotada>
           <figure class="figura">
-            <div class="figura-marco anotada-img">
-              <picture>
-                <source type="image/avif" srcset="../../assets/img/fisio-hero-720.avif 720w, ../../assets/img/fisio-hero-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <source type="image/webp" srcset="../../assets/img/fisio-hero-720.webp 720w, ../../assets/img/fisio-hero-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <img src="../../assets/img/fisio-hero-720.jpg" srcset="../../assets/img/fisio-hero-720.jpg 720w, ../../assets/img/fisio-hero-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="825" loading="lazy" decoding="async" alt="Portada con cinco marcadores: titular, botón de reserva, hueco de la foto, aviso de servicio a domicilio y cifras.">
-              </picture>
-              <span class="marca" data-n="1" style="--x:5%; --y:22%" aria-hidden="true">1</span>
-              <span class="marca" data-n="2" style="--x:5%; --y:71%" aria-hidden="true">2</span>
-              <span class="marca" data-n="3" style="--x:88%; --y:59%" aria-hidden="true">3</span>
-              <span class="marca" data-n="4" style="--x:60%; --y:68%" aria-hidden="true">4</span>
-              <span class="marca" data-n="5" style="--x:5%; --y:84%" aria-hidden="true">5</span>
-            </div>
-            <figcaption>La portada.</figcaption>
-          </figure>
-          <ol class="decisiones">
-            <li data-n="1" tabindex="0"><span aria-hidden="true">1</span><div><h3>Qué, dónde y cómo</h3><p>«Fisioterapia y osteopatía en Dénia» es lo que escribe un paciente en Google. «A la medida de cada persona» es su forma de trabajar.</p></div></li>
-            <li data-n="2" tabindex="0"><span aria-hidden="true">2</span><div><h3>El número dentro del botón</h3><p>La cita se pide por teléfono, así que el botón lo dice y lo muestra: nadie tiene que buscarlo.</p></div></li>
-            <li data-n="3" tabindex="0"><span aria-hidden="true">3</span><div><h3>Un hueco honesto</h3><p>No se ha puesto la foto de otra fisioterapeuta sacada de un banco de imágenes. El hueco queda marcado hasta tener su retrato.</p></div></li>
-            <li data-n="4" tabindex="0"><span aria-hidden="true">4</span><div><h3>También a domicilio</h3><p>Para quien no puede desplazarse, este servicio decide la llamada. Por eso aparece ya en la portada.</p></div></li>
-            <li data-n="5" tabindex="0"><span aria-hidden="true">5</span><div><h3>Trayectoria en cifras reales</h3><p>Años de experiencia y consulta propia desde 2003, sacados de su propia trayectoria. Ni una cifra inventada.</p></div></li>
-          </ol>
-        </div>
-
-        <div class="anotada" data-anotada>
-          <figure class="figura">
-            <div class="figura-marco anotada-img">
-              <picture>
-                <source type="image/avif" srcset="../../assets/img/fisio-tratamientos-720.avif 720w, ../../assets/img/fisio-tratamientos-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <source type="image/webp" srcset="../../assets/img/fisio-tratamientos-720.webp 720w, ../../assets/img/fisio-tratamientos-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <img src="../../assets/img/fisio-tratamientos-720.jpg" srcset="../../assets/img/fisio-tratamientos-720.jpg 720w, ../../assets/img/fisio-tratamientos-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="1085" loading="lazy" decoding="async" alt="Sección «¿En qué puedo ayudarte?»: ocho tratamientos en dos columnas, cada uno con una frase y, en algunos, la formación que lo respalda; debajo, un recuadro para quien no encuentra su caso.">
-              </picture>
-              <span class="marca" data-n="1" style="--x:5%; --y:13%" aria-hidden="true">1</span>
-              <span class="marca" data-n="2" style="--x:48%; --y:32%" aria-hidden="true">2</span>
-              <span class="marca" data-n="3" style="--x:8%; --y:87%" aria-hidden="true">3</span>
+            <div class="figura-marco anotada-marco">
+              <div class="anotada-img">
+                <picture>
+                  <source type="image/avif" srcset="../../assets/img/fisio-tratamientos-720.avif 720w, ../../assets/img/fisio-tratamientos-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <source type="image/webp" srcset="../../assets/img/fisio-tratamientos-720.webp 720w, ../../assets/img/fisio-tratamientos-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <img src="../../assets/img/fisio-tratamientos-720.jpg" srcset="../../assets/img/fisio-tratamientos-720.jpg 720w, ../../assets/img/fisio-tratamientos-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="1085" loading="lazy" decoding="async" alt="Sección «¿En qué puedo ayudarte?»: ocho tratamientos en dos columnas, cada uno con una frase y, en algunos, la formación que lo respalda; debajo, un recuadro para quien no encuentra su caso.">
+                </picture>
+                <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <g data-n="1"><path class="halo" d="M2 13C2.2 12.6 2.3 11.3 3.2 10.5C4.1 9.7 5.6 8.9 7.4 8.3C9.3 7.7 11.8 7.1 14.3 6.7C16.9 6.4 19.9 6.2 22.8 6.1C25.6 6.1 28.6 6.3 31.2 6.5C33.8 6.8 36.4 7.3 38.4 7.8C40.4 8.4 42.2 9.1 43.5 9.8C44.8 10.5 45.7 11.3 46.1 12C46.6 12.8 46.6 13.7 46.1 14.5C45.6 15.2 44.6 16.1 43.2 16.8C41.7 17.5 39.7 18.1 37.4 18.6C35.1 19.1 32.3 19.4 29.6 19.6C26.9 19.8 23.8 19.7 21.1 19.6C18.4 19.4 15.7 19.1 13.5 18.6C11.3 18.2 9.3 17.6 7.7 17C6.1 16.3 4.9 15.6 4.1 14.8C3.4 14.1 3 13.3 3.1 12.5C3.2 11.7 4.5 10.6 4.8 10.2"/><path d="M2 13C2.2 12.6 2.3 11.3 3.2 10.5C4.1 9.7 5.6 8.9 7.4 8.3C9.3 7.7 11.8 7.1 14.3 6.7C16.9 6.4 19.9 6.2 22.8 6.1C25.6 6.1 28.6 6.3 31.2 6.5C33.8 6.8 36.4 7.3 38.4 7.8C40.4 8.4 42.2 9.1 43.5 9.8C44.8 10.5 45.7 11.3 46.1 12C46.6 12.8 46.6 13.7 46.1 14.5C45.6 15.2 44.6 16.1 43.2 16.8C41.7 17.5 39.7 18.1 37.4 18.6C35.1 19.1 32.3 19.4 29.6 19.6C26.9 19.8 23.8 19.7 21.1 19.6C18.4 19.4 15.7 19.1 13.5 18.6C11.3 18.2 9.3 17.6 7.7 17C6.1 16.3 4.9 15.6 4.1 14.8C3.4 14.1 3 13.3 3.1 12.5C3.2 11.7 4.5 10.6 4.8 10.2"/></g>
+                  <g data-n="2"><path class="halo" d="M3.4 32.8C3.6 32.5 3.9 31.8 5 31.3C6.2 30.9 8.1 30.5 10.3 30.2C12.4 29.8 15.3 29.6 18.1 29.4C20.8 29.2 24 29.1 27 29.1C29.9 29.1 33 29.2 35.8 29.3C38.5 29.5 41.3 29.7 43.6 29.9C45.9 30.2 48.1 30.6 49.7 30.9C51.3 31.3 52.6 31.8 53.1 32.2C53.7 32.6 53.7 33.1 53 33.6C52.4 34 51 34.5 49.2 34.9C47.5 35.2 45 35.5 42.4 35.8C39.9 36 36.9 36.2 34 36.2C31.1 36.3 28.1 36.3 25.3 36.2C22.5 36.1 19.6 36 17.2 35.8C14.7 35.6 12.3 35.3 10.4 34.9C8.5 34.6 6.9 34.2 5.9 33.8C4.9 33.4 4.4 32.9 4.5 32.5C4.7 32 6.5 31.4 6.9 31.2"/><path d="M3.4 32.8C3.6 32.5 3.9 31.8 5 31.3C6.2 30.9 8.1 30.5 10.3 30.2C12.4 29.8 15.3 29.6 18.1 29.4C20.8 29.2 24 29.1 27 29.1C29.9 29.1 33 29.2 35.8 29.3C38.5 29.5 41.3 29.7 43.6 29.9C45.9 30.2 48.1 30.6 49.7 30.9C51.3 31.3 52.6 31.8 53.1 32.2C53.7 32.6 53.7 33.1 53 33.6C52.4 34 51 34.5 49.2 34.9C47.5 35.2 45 35.5 42.4 35.8C39.9 36 36.9 36.2 34 36.2C31.1 36.3 28.1 36.3 25.3 36.2C22.5 36.1 19.6 36 17.2 35.8C14.7 35.6 12.3 35.3 10.4 34.9C8.5 34.6 6.9 34.2 5.9 33.8C4.9 33.4 4.4 32.9 4.5 32.5C4.7 32 6.5 31.4 6.9 31.2"/></g>
+                  <g data-n="3"><path class="halo" d="M1.7 87C2.4 86.5 3.7 84.9 6.2 84C8.6 83.1 12.3 82.3 16.3 81.6C20.4 80.9 25.4 80.3 30.5 79.9C35.6 79.5 41.4 79.2 47 79.1C52.7 79 58.9 79.1 64.5 79.3C70.1 79.6 75.9 80 80.6 80.6C85.2 81.2 89.6 82 92.5 82.9C95.4 83.7 97.4 84.8 98 85.8C98.7 86.8 97.9 87.8 96.3 88.8C94.7 89.7 91.8 90.6 88.4 91.4C85 92.2 80.5 92.8 75.9 93.3C71.3 93.9 65.9 94.3 60.5 94.5C55.1 94.7 49.2 94.8 43.6 94.7C38.1 94.6 32.1 94.3 27.1 93.9C22 93.4 17.1 92.8 13.5 92C9.8 91.3 6.9 90.3 5.4 89.4C3.9 88.4 3.5 87.4 4.3 86.4C5 85.5 8.9 84.1 9.8 83.7"/><path d="M1.7 87C2.4 86.5 3.7 84.9 6.2 84C8.6 83.1 12.3 82.3 16.3 81.6C20.4 80.9 25.4 80.3 30.5 79.9C35.6 79.5 41.4 79.2 47 79.1C52.7 79 58.9 79.1 64.5 79.3C70.1 79.6 75.9 80 80.6 80.6C85.2 81.2 89.6 82 92.5 82.9C95.4 83.7 97.4 84.8 98 85.8C98.7 86.8 97.9 87.8 96.3 88.8C94.7 89.7 91.8 90.6 88.4 91.4C85 92.2 80.5 92.8 75.9 93.3C71.3 93.9 65.9 94.3 60.5 94.5C55.1 94.7 49.2 94.8 43.6 94.7C38.1 94.6 32.1 94.3 27.1 93.9C22 93.4 17.1 92.8 13.5 92C9.8 91.3 6.9 90.3 5.4 89.4C3.9 88.4 3.5 87.4 4.3 86.4C5 85.5 8.9 84.1 9.8 83.7"/></g>
+                </svg>
+                <span class="marca" data-n="1" style="--x:2.5%; --y:13%" aria-hidden="true">1</span>
+                <span class="marca" data-n="2" style="--x:2.8%; --y:32.8%" aria-hidden="true">2</span>
+                <span class="marca" data-n="3" style="--x:2.5%; --y:87%" aria-hidden="true">3</span>
+              </div>
             </div>
             <figcaption>Tratamientos.</figcaption>
           </figure>
@@ -211,14 +218,20 @@
 
         <div class="anotada" data-anotada>
           <figure class="figura">
-            <div class="figura-marco anotada-img">
-              <picture>
-                <source type="image/avif" srcset="../../assets/img/fisio-proceso-720.avif 720w, ../../assets/img/fisio-proceso-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <source type="image/webp" srcset="../../assets/img/fisio-proceso-720.webp 720w, ../../assets/img/fisio-proceso-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <img src="../../assets/img/fisio-proceso-720.jpg" srcset="../../assets/img/fisio-proceso-720.jpg 720w, ../../assets/img/fisio-proceso-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="724" loading="lazy" decoding="async" alt="Sección oscura «Sin prisas y con un plan pensado para ti» con tres pasos: valoración completa, plan a tu medida y sesiones individuales.">
-              </picture>
-              <span class="marca" data-n="1" style="--x:5%; --y:44%" aria-hidden="true">1</span>
-              <span class="marca" data-n="2" style="--x:5%; --y:83%" aria-hidden="true">2</span>
+            <div class="figura-marco anotada-marco">
+              <div class="anotada-img">
+                <picture>
+                  <source type="image/avif" srcset="../../assets/img/fisio-proceso-720.avif 720w, ../../assets/img/fisio-proceso-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <source type="image/webp" srcset="../../assets/img/fisio-proceso-720.webp 720w, ../../assets/img/fisio-proceso-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <img src="../../assets/img/fisio-proceso-720.jpg" srcset="../../assets/img/fisio-proceso-720.jpg 720w, ../../assets/img/fisio-proceso-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="724" loading="lazy" decoding="async" alt="Sección oscura «Sin prisas y con un plan pensado para ti» con tres pasos: valoración completa, plan a tu medida y sesiones individuales.">
+                </picture>
+                <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <g data-n="1"><path class="halo" d="M1.4 52.5C1.9 51.2 2.1 47 4.2 44.6C6.3 42.2 9.9 39.7 14.1 37.8C18.3 36 23.8 34.4 29.2 33.4C34.7 32.4 40.9 31.9 46.7 31.9C52.5 31.8 58.6 32.3 63.9 33.2C69.3 34 74.5 35.2 79 36.8C83.4 38.3 87.5 40.2 90.5 42.4C93.5 44.5 96 47 97.1 49.4C98.2 51.9 98.4 54.7 97.2 57.2C96 59.7 93.5 62.3 90.2 64.4C86.8 66.5 82.1 68.4 77.1 69.8C72.2 71.1 66.2 72 60.6 72.4C55 72.8 48.9 72.7 43.4 72.2C37.9 71.7 32.5 70.7 27.7 69.5C23 68.3 18.5 66.6 15 64.8C11.4 62.9 8.3 60.7 6.4 58.4C4.5 56.1 3.4 53.4 3.6 50.9C3.8 48.5 7 44.8 7.7 43.5"/><path d="M1.4 52.5C1.9 51.2 2.1 47 4.2 44.6C6.3 42.2 9.9 39.7 14.1 37.8C18.3 36 23.8 34.4 29.2 33.4C34.7 32.4 40.9 31.9 46.7 31.9C52.5 31.8 58.6 32.3 63.9 33.2C69.3 34 74.5 35.2 79 36.8C83.4 38.3 87.5 40.2 90.5 42.4C93.5 44.5 96 47 97.1 49.4C98.2 51.9 98.4 54.7 97.2 57.2C96 59.7 93.5 62.3 90.2 64.4C86.8 66.5 82.1 68.4 77.1 69.8C72.2 71.1 66.2 72 60.6 72.4C55 72.8 48.9 72.7 43.4 72.2C37.9 71.7 32.5 70.7 27.7 69.5C23 68.3 18.5 66.6 15 64.8C11.4 62.9 8.3 60.7 6.4 58.4C4.5 56.1 3.4 53.4 3.6 50.9C3.8 48.5 7 44.8 7.7 43.5"/></g>
+                  <g data-n="2"><path class="halo" d="M1.3 84C2 83.5 3.1 82.1 5.6 81.3C8.1 80.4 11.9 79.6 16 79C20.1 78.4 25.3 77.9 30.4 77.5C35.6 77.1 41.4 76.9 47.1 76.8C52.7 76.8 58.8 76.8 64.3 77C69.8 77.3 75.6 77.7 80.2 78.2C84.9 78.7 89.4 79.5 92.4 80.2C95.4 81 97.5 82 98.3 82.9C99 83.8 98.4 84.8 96.9 85.7C95.3 86.5 92.3 87.4 88.8 88.1C85.3 88.8 80.8 89.4 76 89.8C71.3 90.3 65.9 90.6 60.5 90.8C55.1 91 49.2 91.1 43.7 91C38.2 90.9 32.4 90.6 27.4 90.2C22.4 89.8 17.4 89.2 13.7 88.6C10 87.9 6.9 87 5.3 86.2C3.6 85.3 3.1 84.3 3.8 83.4C4.5 82.6 8.4 81.3 9.3 80.9"/><path d="M1.3 84C2 83.5 3.1 82.1 5.6 81.3C8.1 80.4 11.9 79.6 16 79C20.1 78.4 25.3 77.9 30.4 77.5C35.6 77.1 41.4 76.9 47.1 76.8C52.7 76.8 58.8 76.8 64.3 77C69.8 77.3 75.6 77.7 80.2 78.2C84.9 78.7 89.4 79.5 92.4 80.2C95.4 81 97.5 82 98.3 82.9C99 83.8 98.4 84.8 96.9 85.7C95.3 86.5 92.3 87.4 88.8 88.1C85.3 88.8 80.8 89.4 76 89.8C71.3 90.3 65.9 90.6 60.5 90.8C55.1 91 49.2 91.1 43.7 91C38.2 90.9 32.4 90.6 27.4 90.2C22.4 89.8 17.4 89.2 13.7 88.6C10 87.9 6.9 87 5.3 86.2C3.6 85.3 3.1 84.3 3.8 83.4C4.5 82.6 8.4 81.3 9.3 80.9"/></g>
+                </svg>
+                <span class="marca" data-n="1" style="--x:2.5%; --y:52.5%" aria-hidden="true">1</span>
+                <span class="marca" data-n="2" style="--x:2.5%; --y:84%" aria-hidden="true">2</span>
+              </div>
             </div>
             <figcaption>Cómo trabaja.</figcaption>
           </figure>

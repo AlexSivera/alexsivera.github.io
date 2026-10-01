@@ -4,7 +4,7 @@
 // Las capturas de los proyectos se hicieron con Playwright a 2× (escritorio, 1440 px)
 // y 3× (móvil, 390 px). Aquí se recortan si hace falta y se exportan en varios anchos.
 import sharp from 'sharp';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 
 const SRC = '_src/img';
 const OUT = 'assets/img';
@@ -63,4 +63,19 @@ for (const img of images) {
     await r.clone().flatten({ background: '#ffffff' }).jpeg({ quality: 80, mozjpeg: true, progressive: true }).toFile(`${OUT}/${name}-${w}.jpg`);
   }
   console.log(`${name}: ${meta.width}x${meta.height} → ${img.widths.join(', ')}`);
+}
+
+// Iconos de la web instalada (manifest.webmanifest) y de iOS, a partir de favicon.svg.
+// «maskable»: Android recorta el icono con su propia forma, así que el dibujo va al 80 % sobre fondo lleno.
+await mkdir('assets/icons', { recursive: true });
+const favicon = await readFile('favicon.svg');
+const iconos = [['icon-192', 192, 1], ['icon-512', 512, 1], ['icon-maskable-512', 512, 0.8], ['apple-touch-icon', 180, 0.9]];
+for (const [nombre, lado, escala] of iconos) {
+  const dibujo = await sharp(favicon, { density: Math.ceil(72 * (lado / 64) * escala) }).resize(Math.round(lado * escala)).toBuffer();
+  // Fondo de tinta lleno: sin esquinas transparentes, que iOS y Android pintarían de blanco o negro.
+  await sharp({ create: { width: lado, height: lado, channels: 4, background: '#151515' } })
+    .composite([{ input: dibujo, gravity: 'center' }])
+    .png()
+    .toFile(`assets/icons/${nombre}.png`);
+  console.log(`icono ${nombre}: ${lado}px`);
 }

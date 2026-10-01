@@ -156,9 +156,12 @@ button, input, select, textarea { font: inherit; color: inherit; }
   text-underline-offset: .28em;
   transition: color .2s var(--ease), text-decoration-thickness .2s var(--ease);
 }
-.enlace:hover { color: var(--lapiz); text-decoration-thickness: 3px; }
 .enlace .flecha { display: inline-block; transition: transform .25s var(--ease); }
-.enlace:hover .flecha { transform: translateX(3px); }
+/* Los hovers van dentro de (hover: hover): en pantallas táctiles se quedarían «pegados» tras el toque. */
+@media (hover: hover) {
+  .enlace:hover { color: var(--lapiz); text-decoration-thickness: 3px; }
+  .enlace:hover .flecha { transform: translateX(3px); }
+}
 
 /* ---------- Botones ---------- */
 .boton {
@@ -180,23 +183,23 @@ button, input, select, textarea { font: inherit; color: inherit; }
   cursor: pointer;
   transition: background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
 }
-.boton:hover { background: var(--lapiz); border-color: var(--lapiz); }
 .boton .flecha { transition: transform .25s var(--ease); }
-.boton:hover .flecha { transform: translateX(4px); }
 .boton-inverso { background: var(--blanco); border-color: var(--blanco); color: var(--lapiz); }
-.boton-inverso:hover { background: var(--tinta); border-color: var(--tinta); color: var(--blanco); }
+@media (hover: hover) {
+  .boton:hover { background: var(--lapiz); border-color: var(--lapiz); }
+  .boton:hover .flecha { transform: translateX(4px); }
+  .boton-inverso:hover { background: var(--tinta); border-color: var(--tinta); color: var(--blanco); }
+}
 
 /* ---------- Cabecera ---------- */
 .cab {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--papel) 94%, transparent);
+  /* Papel opaco: translúcida se teñía de gris azulado al pasar sobre la hoja azul. */
+  background: var(--papel);
   border-bottom: 1px solid transparent;
   transition: border-color .25s var(--ease);
-}
-@supports (backdrop-filter: blur(1px)) {
-  .cab { backdrop-filter: saturate(1.2) blur(8px); }
 }
 .cab.con-borde { border-bottom-color: var(--linea); }
 .cab-in {
@@ -236,13 +239,17 @@ button, input, select, textarea { font: inherit; color: inherit; }
   background-repeat: no-repeat;
   transition: background-size .3s var(--ease), color .2s;
 }
-.nav a:hover, .nav a[aria-current="true"] { background-size: 100% 2px; }
+/* aria-current="page" en la sección actual; "true" en los casos, que cuelgan de Proyectos. */
+.nav a[aria-current] { background-size: 100% 2px; }
 .nav .nav-contacto {
   font-weight: 700;
   color: var(--lapiz);
   background-size: 100% 2px;
 }
-.nav .nav-contacto:hover { color: var(--lapiz-osc); }
+@media (hover: hover) {
+  .nav a:hover { background-size: 100% 2px; }
+  .nav .nav-contacto:hover { color: var(--lapiz-osc); }
+}
 .menu-boton {
   display: inline-flex;
   align-items: center;
@@ -279,6 +286,17 @@ button, input, select, textarea { font: inherit; color: inherit; }
   color: var(--tinta);
 }
 .menu::backdrop { background: rgb(21 21 21 / .4); }
+/* Con el menú abierto la página de detrás no se mueve. */
+html:has(.menu[open]) { overflow: hidden; }
+/* Entrada: el papel baja un poco y los enlaces llegan uno tras otro. Sin JS ni reduced-motion, aparece tal cual. */
+.menu[open] { animation: menu-entra .28s var(--ease); }
+.menu[open] nav li { animation: menu-linea .4s var(--ease) backwards; }
+.menu[open] nav li:nth-child(2) { animation-delay: .04s; }
+.menu[open] nav li:nth-child(3) { animation-delay: .08s; }
+.menu[open] nav li:nth-child(4) { animation-delay: .12s; }
+.menu[open] nav li:nth-child(5) { animation-delay: .16s; }
+@keyframes menu-entra { from { opacity: 0; transform: translateY(-.75rem); } }
+@keyframes menu-linea { from { opacity: 0; transform: translateY(.6rem); } }
 .menu-in { display: flex; flex-direction: column; min-height: 100%; padding-bottom: 2rem; }
 .menu-cab { display: flex; align-items: center; justify-content: space-between; height: var(--cab); }
 .menu nav { flex: 1; padding-top: 2rem; }
@@ -365,6 +383,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .trazo { position: relative; display: inline-block; white-space: nowrap; }
 .trazo > svg {
   position: absolute;
+  max-width: none;          /* sobresale de la palabra a propósito: el max-width global lo recortaba */
   pointer-events: none;
   overflow: visible;
   color: var(--lapiz);
@@ -376,7 +395,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
-.trazo-circulo > svg { left: -7%; top: -16%; width: 114%; height: 138%; }
+.trazo-circulo > svg { left: -7%; top: -8%; width: 114%; height: 128%; }
 .trazo-circulo path { stroke-width: 3; }
 .trazo-tachado > svg { left: -3%; top: 38%; width: 106%; height: 34%; }
 .trazo-tachado path { stroke-width: 5; }
@@ -437,7 +456,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
   transition: transform .35s var(--ease), border-color .2s;
 }
 .pantalla img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.tira-lista a:hover .pantalla { transform: translateY(-4px); border-color: var(--tinta); }
+@media (hover: hover) {
+  .tira-lista a:hover .pantalla { transform: translateY(-4px); border-color: var(--tinta); }
+}
 .tira-pie {
   display: block;
   margin-top: .8rem;
@@ -458,6 +479,25 @@ button, input, select, textarea { font: inherit; color: inherit; }
     padding-inline: 0;
   }
 }
+/* Escritorio: la nota 2 va en el margen, junto a las pantallas que comenta (antes quedaba sola debajo, con un hueco muerto). */
+@media (min-width: 70em) {
+  .tira {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--margen);
+    column-gap: var(--sep-margen);
+    align-items: start;
+  }
+  .tira .tira-nota { display: block; margin-top: 0; }
+}
+/* Móvil y tablet: las pantallas suben justo detrás del botón y la nota 1 pasa detrás de ellas,
+   para que la primera vista ya enseñe trabajo. */
+@media (max-width: 69.99em) {
+  .portada > .envoltura { display: flex; flex-direction: column; }
+  .portada-intro, .portada .tira { display: contents; }
+  .portada .tira-lista { order: 1; margin-top: clamp(2rem, 6vw, 3rem); }
+  .portada-intro > .nota { order: 2; margin-top: 1.25rem; }
+  .portada .tira-nota { order: 3; }
+}
 
 /* ---------- Secciones ---------- */
 .seccion { padding-block: var(--seccion); }
@@ -467,51 +507,12 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .seccion-cab .entradilla { margin-top: 1.25rem; }
 .seccion-cab .par { margin-top: 1.25rem; }
 
-/* ---------- Leyenda de estados ---------- */
-.estado {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .3rem .65rem;
-  border: 1.5px solid var(--tinta);
-  border-radius: 2px;
-  font-family: var(--f-grot);
-  font-size: var(--t-mini);
-  font-weight: 600;
-  letter-spacing: .01em;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-.estado-real { background: var(--tinta); color: var(--blanco); }
-.estado-propuesta { border-style: dashed; color: var(--tinta); }
-.leyenda {
-  display: grid;
-  gap: 1rem;
-  font-size: var(--t-small);
-  line-height: 1.5;
-  color: var(--tinta-2);
-  max-width: 50rem;
-}
-.leyenda p { display: grid; grid-template-columns: auto; gap: .5rem; margin: 0; }
-.leyenda .estado { justify-self: start; }
-@media (min-width: 40em) {
-  .leyenda p { grid-template-columns: 13.5rem 1fr; align-items: baseline; gap: 1rem; }
-}
-
 /* ---------- Láminas de proyecto ---------- */
 .laminas { display: grid; gap: clamp(4.5rem, 9vw, 8rem); }
 .lamina { display: grid; gap: 1.5rem; }
 .lamina-cab { display: grid; gap: .75rem; }
-.lamina-num-sin-uso {
-  font-family: var(--f-grot);
-  font-size: var(--t-mini);
-  font-weight: 700;
-  color: var(--lapiz);
-  letter-spacing: .06em;
-}
 .lamina-titulo { font-size: clamp(2.2rem, 1.4rem + 3.4vw, 4.5rem); font-weight: 800; letter-spacing: -.04em; }
 .lamina-titulo a { text-decoration: none; }
-.lamina-titulo a:hover { color: var(--lapiz); }
 .lamina-tipo { font-size: var(--t-lead); color: var(--tinta-2); margin: 0; line-height: 1.35; }
 .lamina-img { margin: 0; }
 .lamina-img a {
@@ -521,7 +522,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
   overflow: hidden;
 }
 .lamina-img img { width: 100%; transition: transform .6s var(--ease); }
-.lamina-img a:hover img { transform: scale(1.012); }
+@media (hover: hover) {
+  .lamina-titulo a:hover { color: var(--lapiz); }
+  .lamina-img a:hover img { transform: scale(1.012); }
+}
 .lamina-img figcaption, .figura figcaption {
   margin-top: .7rem;
   font-style: italic;
@@ -549,8 +553,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
     row-gap: 2rem;
   }
   .lamina-cab { grid-column: 1 / -1; grid-template-columns: auto 1fr; column-gap: 2rem; align-items: end; }
-  .lamina-cab .lamina-num { grid-column: 1 / -1; }
-  .lamina-cab .estado { grid-column: 1 / -1; justify-self: start; }
   .lamina-img { grid-column: 1; }
   .lamina-ficha { grid-column: 2; }
   .lamina .muestrario { grid-column: 1; }
@@ -691,22 +693,31 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .sobre-cab .h2 { max-width: 15em; }
 .retrato { position: relative; margin: 0; width: min(18rem, 68%); background: var(--papel); }
 .retrato img { mix-blend-mode: multiply; width: 100%; }
+/* Óvalo centrado en la cara (la cabeza ocupa del 16 al 84 % del ancho): el mismo aire a los dos lados
+   y dentro de la foto. La flecha sale por la derecha hasta el pie «Hola, soy yo.». */
 .retrato-trazo {
   position: absolute;
-  left: 4%; top: 1%;
-  width: 92%; height: 90%;
+  left: 4.4%; top: -2.1%;
+  width: 85.6%; height: 91.9%;
+  max-width: none;
   overflow: visible;
   color: var(--lapiz);
   pointer-events: none;
+  filter: drop-shadow(0 0 1.5px rgb(255 255 255 / .9));   /* separa el trazo del pelo y la camiseta */
 }
-.retrato-trazo path { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-.js .retrato-trazo path { stroke-dasharray: 3000; stroke-dashoffset: 3000; }
-.js .retrato.dibujado .retrato-trazo path { stroke-dashoffset: 0; transition: stroke-dashoffset 1s var(--ease); }
-.js .retrato.dibujado .retrato-trazo path + path { transition-delay: .6s; }
+/* Sin non-scaling-stroke y con pathLength="1": el trazo se puede medir exacto y dibujarse a ritmo de mano.
+   El grosor escala con la foto (≈3 px en escritorio). */
+.retrato-trazo path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.js .retrato-trazo path { stroke-dasharray: 1 1.1; stroke-dashoffset: 1.02; }   /* 1.02: sin punto suelto del remate redondo al empezar */
+.js .retrato.dibujado .retrato-trazo path { stroke-dashoffset: 0; transition: stroke-dashoffset 2.4s cubic-bezier(.4, .05, .3, 1) .2s; }
+.js .retrato.dibujado .retrato-trazo path + path { transition: stroke-dashoffset .5s ease-out 2.45s; }
+/* El pie aparece cuando llega la flecha. */
+.js .retrato:has(.retrato-trazo) figcaption { opacity: 0; }
+.js .retrato.dibujado figcaption { opacity: 1; transition: opacity .6s ease-out 2.8s; }
 .retrato figcaption {
   position: absolute;
-  left: calc(100% + .9rem);
-  bottom: 4%;
+  left: calc(100% + 1.1rem);
+  top: calc(83% - .7rem);
   width: max-content;
   font-style: italic;
   color: var(--lapiz);
@@ -714,6 +725,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
   line-height: 1.3;
   text-align: left;
   max-width: 8rem;
+}
+/* Dos flechas: a la derecha cuando hay sitio (una columna) y hacia abajo en escritorio,
+   donde el hueco entre la foto y el texto es estrecho y el pie chocaba con el párrafo. */
+.retrato-trazo .flecha-abajo { display: none; }
+@media (min-width: 52em) {
+  .retrato-trazo .flecha-lado { display: none; }
+  .retrato-trazo .flecha-abajo { display: inline; }
+  .retrato figcaption { left: auto; right: 16%; top: calc(100% + 1.75rem); text-align: right; }
 }
 .sobre-texto .entradilla { margin-bottom: 1.25rem; }
 .apps {
@@ -737,7 +756,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .sobre { grid-template-columns: minmax(14rem, 20rem) minmax(0, 1fr); column-gap: clamp(3.5rem, 7vw, 7rem); row-gap: 3rem; align-items: start; }
   .sobre-cab { grid-column: 1 / -1; }
   .retrato { width: auto; position: sticky; top: calc(var(--cab) + 2rem); }
-  .retrato figcaption { left: auto; right: -2.5rem; bottom: -2rem; }
 }
 
 /* ---------- Preguntas ---------- */
@@ -769,7 +787,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   transition: transform .3s var(--ease);
 }
 .pregunta[open] summary::after { transform: rotate(45deg); }
-.pregunta summary:hover { color: var(--lapiz); }
+@media (hover: hover) { .pregunta summary:hover { color: var(--lapiz); } }
 .respuesta { padding: 0 0 1.5rem; max-width: 42em; }
 .preguntas-bloque { display: grid; gap: 2rem; }
 @media (min-width: 70em) {
@@ -835,7 +853,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .hueco select option { color: var(--tinta); background: var(--blanco); }
 /* El hueco vacío se distingue del rellenado por la letra: cursiva serif frente a grotesca. */
 .hueco input::placeholder { color: rgb(255 255 255 / .8); font-family: var(--f-serif); font-style: italic; font-weight: 400; }
-.hueco input:hover, .hueco select:hover { border-bottom-color: var(--blanco); }
+@media (hover: hover) { .hueco input:hover, .hueco select:hover { border-bottom-color: var(--blanco); } }
 .hueco input:focus, .hueco select:focus { outline: none; border-bottom-color: var(--blanco); background: rgb(255 255 255 / .12); }
 .hueco input:focus-visible, .hueco select:focus-visible { outline: 2px solid var(--blanco); outline-offset: 2px; }
 .hueco input[aria-invalid="true"] { border-bottom-style: dashed; border-bottom-color: #ffd7cf; }
@@ -920,7 +938,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .pie ul { list-style: none; display: grid; gap: 0; }
 .pie li a { display: inline-block; padding-block: .45rem; }
 .pie a { text-decoration-color: var(--linea-fuerte); text-underline-offset: .2em; }
-.pie a:hover { color: var(--lapiz); text-decoration-color: var(--lapiz); }
+@media (hover: hover) { .pie a:hover { color: var(--lapiz); text-decoration-color: var(--lapiz); } }
 .pie h2 { font-size: var(--t-mini); letter-spacing: .09em; text-transform: uppercase; color: var(--tinta-2); font-weight: 600; margin-bottom: .75rem; }
 .pie-legal {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem;
@@ -953,7 +971,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .caso-cab { padding-top: clamp(2rem, 6vw, 5rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
 .migas { font-family: var(--f-grot); font-size: var(--t-small); margin-bottom: 2rem; }
 .migas a { color: var(--tinta-2); text-underline-offset: .2em; }
-.migas a:hover { color: var(--lapiz); }
+@media (hover: hover) { .migas a:hover { color: var(--lapiz); } }
 .caso-titulo {
   font-size: clamp(3rem, 1.4rem + 7vw, 8rem);
   font-weight: 800;
@@ -1006,6 +1024,32 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .anotada { display: grid; gap: 2rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
 .anotada:first-of-type { margin-top: 0; }
 .anotada-img { position: relative; }
+
+/* Rodeos: al señalar una decisión, un círculo a lápiz rodea lo que explica.
+   El halo blanco lo separa de las capturas oscuras, como el aro de los marcadores. */
+.rodeos {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  max-width: none;
+  overflow: visible;
+  pointer-events: none;
+  color: var(--lapiz);
+}
+.rodeos path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.rodeos .halo { stroke: var(--blanco); stroke-width: 6; opacity: .7; }
+.rodeos g { visibility: hidden; transition: visibility 0s linear .3s; }
+.rodeos g.activa { visibility: visible; transition: none; }
+/* Longitud en píxeles de pantalla (non-scaling-stroke): 4000 cubre el rodeo más grande. */
+.js .rodeos path { stroke-dasharray: 4000; stroke-dashoffset: 4000; transition: stroke-dashoffset .3s ease-in; }
+.js .rodeos .activa path { stroke-dashoffset: 0; transition: stroke-dashoffset .75s var(--ease); }
 .marca {
   position: absolute;
   left: var(--x); top: var(--y);
@@ -1051,8 +1095,32 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .anotada { grid-template-columns: minmax(0, 1fr) 22rem; column-gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
   .anotada.vertical { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); }
 }
+/* Si la lista es más larga que la captura, la captura se queda a la vista mientras se lee.
+   Solo con pantallas altas: en un portátil bajo taparía el final de la imagen. */
+@media (min-width: 70em) and (min-height: 46em) {
+  .anotada > .figura { position: sticky; top: calc(var(--cab) + 1.5rem); }
+}
+/* Móvil: la captura de escritorio a 360 px no se lee. Se muestra más grande y se recorre deslizando;
+   al tocar una decisión, la captura se desplaza hasta su rodeo (main.js). */
 @media (max-width: 40em) {
   .marca { width: 1.6rem; height: 1.6rem; font-size: .75rem; box-shadow: 0 0 0 2px var(--blanco); }
+  .anotada:not(.vertical) .anotada-marco {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--lapiz) transparent;
+  }
+  .anotada:not(.vertical) .anotada-img { width: 230%; }
+  .anotada:not(.vertical) .anotada-marco + figcaption::before {
+    content: "Desliza para recorrer la captura →";
+    display: block;
+    font-family: var(--f-grot);
+    font-style: normal;
+    font-size: var(--t-mini);
+    font-weight: 600;
+    color: var(--lapiz);
+    margin-bottom: .25rem;
+  }
 }
 
 /* Móvil del caso */
@@ -1112,7 +1180,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   line-height: .95;
   transition: color .2s;
 }
-.siguiente a:hover strong { color: var(--lapiz); }
+@media (hover: hover) { .siguiente a:hover strong { color: var(--lapiz); } }
 .siguiente span.que { color: var(--tinta-2); font-size: var(--t-lead); }
 .creditos { font-size: var(--t-mini); color: var(--tinta-2); line-height: 1.5; margin-top: 1rem; max-width: 60rem; }
 .creditos a { color: inherit; }
@@ -1145,11 +1213,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .seleccion-item { display: grid; gap: .75rem; align-content: start; justify-items: start; }
 .seleccion-img { display: block; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--linea-fuerte); background: var(--papel-2); }
 .seleccion-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s var(--ease); }
-.seleccion-item:hover .seleccion-img img { transform: scale(1.015); }
-.seleccion-item .estado { margin-top: .5rem; }
+@media (hover: hover) { .seleccion-item:hover .seleccion-img img { transform: scale(1.015); } }
 .seleccion-titulo { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); font-weight: 800; letter-spacing: -.035em; margin-top: .6rem; }
 .seleccion-titulo a { text-decoration: none; }
-.seleccion-titulo a:hover { color: var(--lapiz); }
+@media (hover: hover) { .seleccion-titulo a:hover { color: var(--lapiz); } }
 .seleccion-item p { color: var(--tinta-2); margin: 0; max-width: 32em; }
 @media (min-width: 56em) { .seleccion { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
@@ -1221,11 +1288,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .hoja-corta .hoja-titulo { margin-bottom: 1.25rem; }
 .hoja-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: 2rem; }
 .hoja-email { color: var(--blanco); font-family: var(--f-grot); font-weight: 600; text-underline-offset: .25em; word-break: break-all; padding-block: .6rem; }
-.hoja-email:hover { text-decoration-thickness: 3px; }
+@media (hover: hover) { .hoja-email:hover { text-decoration-thickness: 3px; } }
 .hoja-pagina { padding-top: clamp(3rem, 7vw, 6rem); }
-
-/* Estado: producto propio */
-.estado-propio { border-color: var(--lapiz); color: var(--lapiz); }
 
 /* Apps (índice de proyectos) */
 .apps-lista { display: grid; gap: clamp(3.5rem, 7vw, 6rem); }
@@ -1260,6 +1324,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .js [data-aparece] { opacity: 1; transform: none; }
   .js .trazo path, .js .retrato-trazo path { stroke-dashoffset: 0; }
+  .js .retrato:has(.retrato-trazo) figcaption { opacity: 1; transition: none; }
+  .menu[open], .menu[open] nav li { animation: none; }
 }
 
 @media print {

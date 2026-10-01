@@ -16,6 +16,8 @@
   <meta property="og:image" content="https://alexsivera.github.io/assets/img/beekery-agenda-1200.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.webmanifest">
   <link rel="preload" href="../../assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/css/styles.css">
@@ -57,7 +59,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <ul>
-          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../proyectos/" aria-current="true">Proyectos</a></li>
           <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
           <li><a href="../../sobre-mi/">Sobre mí</a></li>
           <li><a class="nav-contacto" href="../../contacto/">Contacto</a></li>
@@ -82,7 +84,7 @@
       <nav aria-label="Menú móvil">
         <ol>
           <li><a href="../../">Inicio</a></li>
-          <li><a href="../../proyectos/">Proyectos</a></li>
+          <li><a href="../../proyectos/" aria-current="true">Proyectos</a></li>
           <li><a href="../../como-trabajo/">Cómo trabajo</a></li>
           <li><a href="../../sobre-mi/">Sobre mí</a></li>
           <li><a href="../../contacto/">Contacto</a></li>
@@ -109,16 +111,24 @@
     <div class="envoltura caso-portada">
       <div class="anotada vertical" data-anotada>
         <figure class="figura">
-          <div class="figura-marco anotada-img">
-            <picture>
-              <source type="image/avif" srcset="../../assets/img/beekery-hero-480.avif 480w, ../../assets/img/beekery-hero-960.avif 960w, ../../assets/img/beekery-hero-1440.avif 1440w" sizes="(min-width: 70em) 40vw, 94vw">
-              <source type="image/webp" srcset="../../assets/img/beekery-hero-480.webp 480w, ../../assets/img/beekery-hero-960.webp 960w, ../../assets/img/beekery-hero-1440.webp 1440w" sizes="(min-width: 70em) 40vw, 94vw">
-              <img src="../../assets/img/beekery-hero-960.jpg" srcset="../../assets/img/beekery-hero-480.jpg 480w, ../../assets/img/beekery-hero-960.jpg 960w, ../../assets/img/beekery-hero-1440.jpg 1440w" sizes="(min-width: 70em) 40vw, 94vw" width="960" height="1200" fetchpriority="high" alt="Mitad izquierda de la portada del diseño para Beekery: indicador «Abierto ahora · hasta las 19:00», titular «Pan que no entiende de prisas», dos botones y tres credenciales del obrador.">
-            </picture>
-            <span class="marca" data-n="1" style="--x:3.5%; --y:14.5%" aria-hidden="true">1</span>
-            <span class="marca" data-n="2" style="--x:3.5%; --y:30%" aria-hidden="true">2</span>
-            <span class="marca" data-n="3" style="--x:3.5%; --y:75%" aria-hidden="true">3</span>
-            <span class="marca" data-n="4" style="--x:3.5%; --y:88%" aria-hidden="true">4</span>
+          <div class="figura-marco anotada-marco">
+            <div class="anotada-img">
+              <picture>
+                <source type="image/avif" srcset="../../assets/img/beekery-hero-480.avif 480w, ../../assets/img/beekery-hero-960.avif 960w, ../../assets/img/beekery-hero-1440.avif 1440w" sizes="(min-width: 70em) 40vw, 94vw">
+                <source type="image/webp" srcset="../../assets/img/beekery-hero-480.webp 480w, ../../assets/img/beekery-hero-960.webp 960w, ../../assets/img/beekery-hero-1440.webp 1440w" sizes="(min-width: 70em) 40vw, 94vw">
+                <img src="../../assets/img/beekery-hero-960.jpg" srcset="../../assets/img/beekery-hero-480.jpg 480w, ../../assets/img/beekery-hero-960.jpg 960w, ../../assets/img/beekery-hero-1440.jpg 1440w" sizes="(min-width: 70em) 40vw, 94vw" width="960" height="1200" fetchpriority="high" alt="Mitad izquierda de la portada del diseño para Beekery: indicador «Abierto ahora · hasta las 19:00», titular «Pan que no entiende de prisas», dos botones y tres credenciales del obrador.">
+              </picture>
+              <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <g data-n="1"><path class="halo" d="M1.9 14.8C2.1 14.5 2.2 13.8 3.2 13.4C4.2 12.9 5.9 12.5 8 12.2C10.1 11.8 13 11.5 15.8 11.3C18.7 11.1 22.2 11 25.3 11C28.5 11 31.8 11.1 34.7 11.2C37.6 11.4 40.4 11.6 42.7 11.9C45 12.2 47 12.6 48.5 13C49.9 13.4 51 13.8 51.6 14.2C52.1 14.7 52.2 15.1 51.6 15.6C51.1 16 50 16.5 48.3 16.8C46.7 17.2 44.3 17.6 41.7 17.8C39.2 18.1 36 18.3 32.9 18.4C29.9 18.5 26.5 18.4 23.5 18.3C20.5 18.3 17.5 18.1 15 17.8C12.5 17.6 10.3 17.3 8.5 16.9C6.7 16.6 5.3 16.2 4.4 15.8C3.5 15.4 3 14.9 3.1 14.5C3.2 14.1 4.7 13.4 5 13.2"/><path d="M1.9 14.8C2.1 14.5 2.2 13.8 3.2 13.4C4.2 12.9 5.9 12.5 8 12.2C10.1 11.8 13 11.5 15.8 11.3C18.7 11.1 22.2 11 25.3 11C28.5 11 31.8 11.1 34.7 11.2C37.6 11.4 40.4 11.6 42.7 11.9C45 12.2 47 12.6 48.5 13C49.9 13.4 51 13.8 51.6 14.2C52.1 14.7 52.2 15.1 51.6 15.6C51.1 16 50 16.5 48.3 16.8C46.7 17.2 44.3 17.6 41.7 17.8C39.2 18.1 36 18.3 32.9 18.4C29.9 18.5 26.5 18.4 23.5 18.3C20.5 18.3 17.5 18.1 15 17.8C12.5 17.6 10.3 17.3 8.5 16.9C6.7 16.6 5.3 16.2 4.4 15.8C3.5 15.4 3 14.9 3.1 14.5C3.2 14.1 4.7 13.4 5 13.2"/></g>
+                <g data-n="2"><path class="halo" d="M0.4 38.8C0.9 37.2 1.4 32.5 3.4 29.7C5.3 26.9 8.6 24.2 12.2 22.2C15.8 20.1 20.4 18.4 25 17.3C29.6 16.2 34.7 15.7 39.6 15.5C44.4 15.4 49.5 15.9 54.1 16.7C58.7 17.5 63.3 18.8 67.2 20.5C71.1 22.2 74.8 24.5 77.4 26.9C80.1 29.3 82.2 32.3 83 35.2C83.9 38 83.8 41.3 82.7 44.2C81.5 47 79.1 50 76.2 52.3C73.2 54.6 69.1 56.7 64.9 58.1C60.7 59.6 55.8 60.6 51.1 61.1C46.4 61.5 41.4 61.5 36.8 61C32.1 60.6 27.4 59.6 23.3 58.3C19.1 57 15.1 55.2 12 53.1C8.8 50.9 6 48.3 4.4 45.6C2.9 42.9 2 39.8 2.4 37C2.7 34.1 5.8 29.9 6.4 28.5"/><path d="M0.4 38.8C0.9 37.2 1.4 32.5 3.4 29.7C5.3 26.9 8.6 24.2 12.2 22.2C15.8 20.1 20.4 18.4 25 17.3C29.6 16.2 34.7 15.7 39.6 15.5C44.4 15.4 49.5 15.9 54.1 16.7C58.7 17.5 63.3 18.8 67.2 20.5C71.1 22.2 74.8 24.5 77.4 26.9C80.1 29.3 82.2 32.3 83 35.2C83.9 38 83.8 41.3 82.7 44.2C81.5 47 79.1 50 76.2 52.3C73.2 54.6 69.1 56.7 64.9 58.1C60.7 59.6 55.8 60.6 51.1 61.1C46.4 61.5 41.4 61.5 36.8 61C32.1 60.6 27.4 59.6 23.3 58.3C19.1 57 15.1 55.2 12 53.1C8.8 50.9 6 48.3 4.4 45.6C2.9 42.9 2 39.8 2.4 37C2.7 34.1 5.8 29.9 6.4 28.5"/></g>
+                <g data-n="3"><path class="halo" d="M1.2 75.5C1.7 75.2 2.6 74.3 4.3 73.8C6 73.3 8.6 72.8 11.4 72.4C14.2 72 17.7 71.6 21.3 71.4C24.9 71.1 29 70.9 33 70.9C37.1 70.8 41.5 70.8 45.5 71C49.5 71.1 53.6 71.4 56.9 71.7C60.2 72.1 63.2 72.6 65.2 73.1C67.3 73.6 68.5 74.2 69 74.8C69.4 75.4 68.8 76 67.7 76.5C66.5 77.1 64.5 77.6 62.1 78C59.8 78.5 56.7 78.9 53.5 79.2C50.2 79.5 46.4 79.8 42.6 79.9C38.8 80 34.6 80.1 30.6 80C26.6 80 22.4 79.8 18.8 79.5C15.2 79.3 11.7 78.9 9.2 78.4C6.7 78 4.7 77.4 3.7 76.9C2.6 76.3 2.5 75.7 3 75.2C3.6 74.6 6.3 73.8 6.9 73.6"/><path d="M1.2 75.5C1.7 75.2 2.6 74.3 4.3 73.8C6 73.3 8.6 72.8 11.4 72.4C14.2 72 17.7 71.6 21.3 71.4C24.9 71.1 29 70.9 33 70.9C37.1 70.8 41.5 70.8 45.5 71C49.5 71.1 53.6 71.4 56.9 71.7C60.2 72.1 63.2 72.6 65.2 73.1C67.3 73.6 68.5 74.2 69 74.8C69.4 75.4 68.8 76 67.7 76.5C66.5 77.1 64.5 77.6 62.1 78C59.8 78.5 56.7 78.9 53.5 79.2C50.2 79.5 46.4 79.8 42.6 79.9C38.8 80 34.6 80.1 30.6 80C26.6 80 22.4 79.8 18.8 79.5C15.2 79.3 11.7 78.9 9.2 78.4C6.7 78 4.7 77.4 3.7 76.9C2.6 76.3 2.5 75.7 3 75.2C3.6 74.6 6.3 73.8 6.9 73.6"/></g>
+                <g data-n="4"><path class="halo" d="M2.9 89.8C3.5 89.4 4.1 88.2 6.1 87.5C8.1 86.7 11.1 86 14.9 85.4C18.7 84.8 23.6 84.3 28.8 83.9C34.1 83.5 40.4 83.3 46.3 83.2C52.3 83.1 58.9 83.2 64.5 83.5C70.1 83.7 75.7 84.2 80.1 84.7C84.5 85.2 88.2 85.9 90.8 86.6C93.4 87.3 95 88.1 95.6 88.8C96.3 89.6 95.9 90.4 94.7 91.1C93.5 91.8 91.3 92.6 88.3 93.2C85.3 93.9 81.2 94.5 76.6 95C72 95.4 66.3 95.8 60.7 96C55 96.2 48.5 96.2 42.8 96.1C37 96 31 95.6 26.2 95.2C21.3 94.8 16.9 94.2 13.7 93.6C10.4 93 8.1 92.2 6.7 91.5C5.3 90.8 4.9 90 5.4 89.3C5.8 88.6 8.8 87.5 9.5 87.1"/><path d="M2.9 89.8C3.5 89.4 4.1 88.2 6.1 87.5C8.1 86.7 11.1 86 14.9 85.4C18.7 84.8 23.6 84.3 28.8 83.9C34.1 83.5 40.4 83.3 46.3 83.2C52.3 83.1 58.9 83.2 64.5 83.5C70.1 83.7 75.7 84.2 80.1 84.7C84.5 85.2 88.2 85.9 90.8 86.6C93.4 87.3 95 88.1 95.6 88.8C96.3 89.6 95.9 90.4 94.7 91.1C93.5 91.8 91.3 92.6 88.3 93.2C85.3 93.9 81.2 94.5 76.6 95C72 95.4 66.3 95.8 60.7 96C55 96.2 48.5 96.2 42.8 96.1C37 96 31 95.6 26.2 95.2C21.3 94.8 16.9 94.2 13.7 93.6C10.4 93 8.1 92.2 6.7 91.5C5.3 90.8 4.9 90 5.4 89.3C5.8 88.6 8.8 87.5 9.5 87.1"/></g>
+              </svg>
+              <span class="marca" data-n="1" style="--x:2.5%; --y:14.8%" aria-hidden="true">1</span>
+              <span class="marca" data-n="2" style="--x:2.5%; --y:38.8%" aria-hidden="true">2</span>
+              <span class="marca" data-n="3" style="--x:2.5%; --y:75.5%" aria-hidden="true">3</span>
+              <span class="marca" data-n="4" style="--x:2.5%; --y:89.8%" aria-hidden="true">4</span>
+            </div>
           </div>
           <figcaption>La portada, sin la foto del pan: es del propio obrador y no se muestra aquí sin su permiso.</figcaption>
         </figure>
@@ -184,16 +194,24 @@
 
         <div class="anotada" data-anotada>
           <figure class="figura">
-            <div class="figura-marco anotada-img">
-              <picture>
-                <source type="image/avif" srcset="../../assets/img/beekery-agenda-720.avif 720w, ../../assets/img/beekery-agenda-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <source type="image/webp" srcset="../../assets/img/beekery-agenda-720.webp 720w, ../../assets/img/beekery-agenda-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
-                <img src="../../assets/img/beekery-agenda-720.jpg" srcset="../../assets/img/beekery-agenda-720.jpg 720w, ../../assets/img/beekery-agenda-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="880" loading="lazy" decoding="async" alt="Sección «Cada pan tiene su día» con cuatro marcadores: el titular, la tarjeta de hoy destacada, la frase del lunes y el botón de WhatsApp.">
-              </picture>
-              <span class="marca" data-n="1" style="--x:5%; --y:26%" aria-hidden="true">1</span>
-              <span class="marca" data-n="2" style="--x:22%; --y:43%" aria-hidden="true">2</span>
-              <span class="marca" data-n="3" style="--x:5%; --y:81%" aria-hidden="true">3</span>
-              <span class="marca" data-n="4" style="--x:72%; --y:81%" aria-hidden="true">4</span>
+            <div class="figura-marco anotada-marco">
+              <div class="anotada-img">
+                <picture>
+                  <source type="image/avif" srcset="../../assets/img/beekery-agenda-720.avif 720w, ../../assets/img/beekery-agenda-1200.avif 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <source type="image/webp" srcset="../../assets/img/beekery-agenda-720.webp 720w, ../../assets/img/beekery-agenda-1200.webp 1200w" sizes="(min-width: 70em) 58vw, 94vw">
+                  <img src="../../assets/img/beekery-agenda-720.jpg" srcset="../../assets/img/beekery-agenda-720.jpg 720w, ../../assets/img/beekery-agenda-1200.jpg 1200w" sizes="(min-width: 70em) 58vw, 94vw" width="1200" height="880" loading="lazy" decoding="async" alt="Sección «Cada pan tiene su día» con cuatro marcadores: el titular, la tarjeta de hoy destacada, la frase del lunes y el botón de WhatsApp.">
+                </picture>
+                <svg class="rodeos" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <g data-n="1"><path class="halo" d="M1.1 57C1.7 55.8 2.5 51.9 4.8 49.6C7.2 47.4 11.1 45.2 15.3 43.6C19.5 41.9 24.9 40.6 30.2 39.7C35.5 38.7 41.4 38.2 47.1 38.1C52.7 38 58.7 38.3 64.1 38.9C69.5 39.6 75 40.6 79.6 42C84.2 43.4 88.6 45.2 91.7 47.2C94.8 49.2 97.3 51.7 98.2 54.1C99.2 56.4 98.9 59.1 97.5 61.4C96 63.7 93.1 66.1 89.6 68C86.1 69.9 81.3 71.5 76.5 72.7C71.6 73.9 66 74.7 60.5 75.1C55.1 75.5 49.2 75.6 43.8 75.2C38.3 74.9 32.7 74.2 27.8 73.1C22.9 72 18.1 70.5 14.4 68.8C10.7 67.1 7.5 64.9 5.6 62.7C3.8 60.5 3 57.9 3.5 55.5C3.9 53.2 7.7 49.8 8.5 48.7"/><path d="M1.1 57C1.7 55.8 2.5 51.9 4.8 49.6C7.2 47.4 11.1 45.2 15.3 43.6C19.5 41.9 24.9 40.6 30.2 39.7C35.5 38.7 41.4 38.2 47.1 38.1C52.7 38 58.7 38.3 64.1 38.9C69.5 39.6 75 40.6 79.6 42C84.2 43.4 88.6 45.2 91.7 47.2C94.8 49.2 97.3 51.7 98.2 54.1C99.2 56.4 98.9 59.1 97.5 61.4C96 63.7 93.1 66.1 89.6 68C86.1 69.9 81.3 71.5 76.5 72.7C71.6 73.9 66 74.7 60.5 75.1C55.1 75.5 49.2 75.6 43.8 75.2C38.3 74.9 32.7 74.2 27.8 73.1C22.9 72 18.1 70.5 14.4 68.8C10.7 67.1 7.5 64.9 5.6 62.7C3.8 60.5 3 57.9 3.5 55.5C3.9 53.2 7.7 49.8 8.5 48.7"/></g>
+                  <g data-n="2"><path class="halo" d="M22 43.4C22.5 42.8 23.9 40.5 25 39.5C26.1 38.5 27.4 37.8 28.6 37.6C29.9 37.4 31.2 37.7 32.4 38.3C33.6 39 34.8 40.3 35.8 41.8C36.7 43.3 37.6 45.4 38.1 47.5C38.7 49.6 39 52.1 39 54.4C39.1 56.7 38.9 59.1 38.5 61.3C38.1 63.4 37.5 65.5 36.8 67.2C36.1 69 35.1 70.6 34.1 71.8C33.1 73 32 74 30.8 74.5C29.6 75 28.3 75.2 27.1 74.8C25.9 74.5 24.6 73.7 23.6 72.5C22.6 71.3 21.6 69.6 20.8 67.7C20.1 65.8 19.6 63.5 19.4 61.3C19.1 59.1 19.1 56.6 19.4 54.5C19.6 52.3 20 50.1 20.6 48.2C21.2 46.3 22 44.6 22.9 43.2C23.7 41.8 25.4 40.3 25.9 39.8"/><path d="M22 43.4C22.5 42.8 23.9 40.5 25 39.5C26.1 38.5 27.4 37.8 28.6 37.6C29.9 37.4 31.2 37.7 32.4 38.3C33.6 39 34.8 40.3 35.8 41.8C36.7 43.3 37.6 45.4 38.1 47.5C38.7 49.6 39 52.1 39 54.4C39.1 56.7 38.9 59.1 38.5 61.3C38.1 63.4 37.5 65.5 36.8 67.2C36.1 69 35.1 70.6 34.1 71.8C33.1 73 32 74 30.8 74.5C29.6 75 28.3 75.2 27.1 74.8C25.9 74.5 24.6 73.7 23.6 72.5C22.6 71.3 21.6 69.6 20.8 67.7C20.1 65.8 19.6 63.5 19.4 61.3C19.1 59.1 19.1 56.6 19.4 54.5C19.6 52.3 20 50.1 20.6 48.2C21.2 46.3 22 44.6 22.9 43.2C23.7 41.8 25.4 40.3 25.9 39.8"/></g>
+                  <g data-n="3"><path class="halo" d="M7.4 78.6C8.1 78.5 10 77.9 11.6 77.8C13.1 77.6 15 77.4 16.7 77.4C18.4 77.4 20.3 77.5 21.9 77.7C23.5 77.8 25 78.1 26.3 78.4C27.5 78.8 28.5 79.2 29.2 79.6C29.9 80 30.3 80.4 30.5 80.9C30.6 81.3 30.5 81.8 30.1 82.2C29.7 82.6 29.1 83 28.2 83.4C27.2 83.8 26 84.1 24.6 84.4C23.2 84.6 21.5 84.8 19.8 84.9C18.2 85 16.3 85 14.7 84.9C13 84.8 11.3 84.6 10 84.3C8.7 84.1 7.5 83.7 6.6 83.4C5.7 83 5 82.6 4.7 82.2C4.3 81.7 4.2 81.3 4.4 80.9C4.5 80.4 5 80 5.6 79.6C6.3 79.2 7.3 78.8 8.5 78.5C9.7 78.2 12.1 77.9 12.8 77.8"/><path d="M7.4 78.6C8.1 78.5 10 77.9 11.6 77.8C13.1 77.6 15 77.4 16.7 77.4C18.4 77.4 20.3 77.5 21.9 77.7C23.5 77.8 25 78.1 26.3 78.4C27.5 78.8 28.5 79.2 29.2 79.6C29.9 80 30.3 80.4 30.5 80.9C30.6 81.3 30.5 81.8 30.1 82.2C29.7 82.6 29.1 83 28.2 83.4C27.2 83.8 26 84.1 24.6 84.4C23.2 84.6 21.5 84.8 19.8 84.9C18.2 85 16.3 85 14.7 84.9C13 84.8 11.3 84.6 10 84.3C8.7 84.1 7.5 83.7 6.6 83.4C5.7 83 5 82.6 4.7 82.2C4.3 81.7 4.2 81.3 4.4 80.9C4.5 80.4 5 80 5.6 79.6C6.3 79.2 7.3 78.8 8.5 78.5C9.7 78.2 12.1 77.9 12.8 77.8"/></g>
+                  <g data-n="4"><path class="halo" d="M72.6 78C73.4 77.9 75.6 77.3 77.3 77.1C79 76.9 80.9 76.8 82.7 76.8C84.5 76.8 86.3 76.9 87.9 77.2C89.5 77.4 91.1 77.7 92.4 78C93.7 78.4 94.9 78.9 95.7 79.4C96.6 79.8 97.3 80.4 97.5 81C97.8 81.5 97.8 82.2 97.4 82.7C97 83.3 96.2 83.9 95.1 84.4C94 84.8 92.5 85.2 91 85.5C89.5 85.8 87.6 86 85.9 86.1C84.2 86.1 82.3 86.1 80.7 86C79 85.8 77.4 85.6 76 85.3C74.5 85 73.2 84.6 72.2 84.1C71.2 83.7 70.3 83.2 69.8 82.7C69.3 82.1 69 81.5 69.1 81C69.3 80.4 69.7 79.8 70.5 79.3C71.3 78.8 72.6 78.3 73.9 78C75.3 77.6 77.8 77.3 78.6 77.2"/><path d="M72.6 78C73.4 77.9 75.6 77.3 77.3 77.1C79 76.9 80.9 76.8 82.7 76.8C84.5 76.8 86.3 76.9 87.9 77.2C89.5 77.4 91.1 77.7 92.4 78C93.7 78.4 94.9 78.9 95.7 79.4C96.6 79.8 97.3 80.4 97.5 81C97.8 81.5 97.8 82.2 97.4 82.7C97 83.3 96.2 83.9 95.1 84.4C94 84.8 92.5 85.2 91 85.5C89.5 85.8 87.6 86 85.9 86.1C84.2 86.1 82.3 86.1 80.7 86C79 85.8 77.4 85.6 76 85.3C74.5 85 73.2 84.6 72.2 84.1C71.2 83.7 70.3 83.2 69.8 82.7C69.3 82.1 69 81.5 69.1 81C69.3 80.4 69.7 79.8 70.5 79.3C71.3 78.8 72.6 78.3 73.9 78C75.3 77.6 77.8 77.3 78.6 77.2"/></g>
+                </svg>
+                <span class="marca" data-n="1" style="--x:2.5%; --y:57%" aria-hidden="true">1</span>
+                <span class="marca" data-n="2" style="--x:20.8%; --y:41.6%" aria-hidden="true">2</span>
+                <span class="marca" data-n="3" style="--x:6.2%; --y:76.8%" aria-hidden="true">3</span>
+                <span class="marca" data-n="4" style="--x:71.4%; --y:76.2%" aria-hidden="true">4</span>
+              </div>
             </div>
             <figcaption>La agenda semanal, un miércoles.</figcaption>
           </figure>

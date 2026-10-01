@@ -44,7 +44,8 @@
       entradas.forEach(function (en) {
         if (en.isIntersecting) { marcar(en.target); obs.unobserve(en.target); }
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.2 });
+    // threshold 0: los bloques de proyecto miden más de una pantalla; con un 20 % tardaban en aparecer y dejaban huecos en blanco.
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
     porDibujar.forEach(function (el) { obs.observe(el); });
   }
 
@@ -71,22 +72,34 @@
     destinos.forEach(function (d) { obsDestino.observe(d); });
   }
 
-  /* ---------- Capturas anotadas: marcador ↔ decisión ---------- */
+  /* ---------- Capturas anotadas: marcador ↔ decisión ↔ rodeo a lápiz ---------- */
   document.querySelectorAll('[data-anotada]').forEach(function (fig) {
     var marcas = fig.querySelectorAll('.marca');
     var items = fig.querySelectorAll('.decisiones li');
+    var conN = fig.querySelectorAll('[data-n]');   // marcadores, decisiones y rodeos
+    var marco = fig.querySelector('.anotada-marco');
+    var lienzo = fig.querySelector('.anotada-img');
     var activar = function (n, on) {
-      marcas.forEach(function (m) { if (m.dataset.n === n) m.classList.toggle('activa', on); });
-      items.forEach(function (li) { if (li.dataset.n === n) li.classList.toggle('activa', on); });
+      conN.forEach(function (el) { if (el.dataset.n === n) el.classList.toggle('activa', on); });
     };
-    [].forEach.call(marcas, function (el) { enlazar(el); });
-    [].forEach.call(items, function (el) { enlazar(el); });
-    function enlazar(el) {
+    // En móvil la captura se recorre deslizando: al elegir una decisión, se lleva su rodeo a la vista.
+    var mostrar = function (n) {
+      if (!marco || !lienzo || marco.scrollWidth <= marco.clientWidth) return;
+      var rodeo = fig.querySelector('.rodeos [data-n="' + n + '"]');
+      if (!rodeo) return;
+      var r = rodeo.getBoundingClientRect(), l = lienzo.getBoundingClientRect();
+      var centro = r.left - l.left + r.width / 2;
+      marco.scrollTo({ left: centro - marco.clientWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+    };
+    [].forEach.call(marcas, function (el) { enlazar(el, false); });
+    [].forEach.call(items, function (el) { enlazar(el, true); });
+    function enlazar(el, esDecision) {
       var n = el.dataset.n;
       el.addEventListener('mouseenter', function () { activar(n, true); });
       el.addEventListener('mouseleave', function () { activar(n, false); });
-      el.addEventListener('focusin', function () { activar(n, true); });
+      el.addEventListener('focusin', function () { activar(n, true); if (esDecision) mostrar(n); });
       el.addEventListener('focusout', function () { activar(n, false); });
+      if (esDecision) el.addEventListener('click', function () { activar(n, true); mostrar(n); });
     }
   });
 
